@@ -9,13 +9,13 @@
    - RecyclerView
    - CardView
     - Tham khảo:  https://viblo.asia/p/ban-biet-gi-ve-recyclerview-Do754j8QZM6
-                     https://viblo.asia/p/android-working-with-card-view-and-recycler-view-gVQvlwQpkZJ
+    https://viblo.asia/p/android-working-with-card-view-and-recycler-view-gVQvlwQpkZJ
      
   Third party libraries
   - Picasso
   - Volley
    - Tham khảo:  https://viblo.asia/p/su-dung-thu-vien-picasso-de-load-anh-trong-android-eW65Gde9KDO
-                   https://viblo.asia/p/android-volley-library-YAQrMJb7M40E
+   https://viblo.asia/p/android-volley-library-YAQrMJb7M40E
                   
 Ứng dụng sử dụng Real-time Database được lưu trữ trên Cloud dựa vào nền tảng Mobile Backend
   - Dreamfactory
