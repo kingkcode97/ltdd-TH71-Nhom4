@@ -19,5 +19,7 @@
        + https://viblo.asia/p/su-dung-thu-vien-picasso-de-load-anh-trong-android-eW65Gde9KDO
        + https://viblo.asia/p/android-volley-library-YAQrMJb7M40E
                   
-- Ứng dụng sử dụng Real-time Database được lưu trữ trên **Cloud** dựa vào nền tảng **Mobile Backend**
-  - Dreamfactory
+- Tạo **Backend APIs** với:
+  - Heroku
+  - Retrofit
+  - Tham khảo: https://jkutner.github.io/2016/08/18/android-backend-api-heroku-retrofit.html
