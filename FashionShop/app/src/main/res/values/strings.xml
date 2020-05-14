@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">FashionShop</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Halllooo</string>
+    <string name="price_bar">price_bar</string>
+    <string name="openDrawer">openDrawer</string>
+    <string name="closeDrawer">closeDrawer</string>
+    <string name="disclaimer">Welcom to Fashion Shop</string>
+    <string name="credits">Not Thing</string>
+    <string name="you_are_running_nout_of_wallet_money">You are Running \nOut of Wallet Money !!!</string>
+    <string name="add_wallet_money">Add Wallet Money</string>
+    <string name="you_cart_is_empty" tools:ignore="DuplicateDefinition">You Cart is Empty !!</string>
+    <string name="rs_0" />
+    <string name="grand_total" />
+    <string name="you_cart_is_empty" tools:ignore="DuplicateDefinition">You Cart is Empty !!</string>
+    <string name="todo" />
+</resources>
