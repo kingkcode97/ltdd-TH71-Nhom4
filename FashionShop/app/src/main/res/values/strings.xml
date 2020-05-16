@@ -9,7 +9,7 @@
     <string name="openDrawer">openDrawer</string>
     <string name="closeDrawer">closeDrawer</string>
     <string name="disclaimer">Welcom to Fashion Shop</string>
-    <string name="credits">Not Thing</string>
+    <string name="credits">Credits</string>
     <string name="you_are_running_nout_of_wallet_money">You are Running \nOut of Wallet Money !!!</string>
     <string name="add_wallet_money">Add Wallet Money</string>
     <string name="you_cart_is_empty" tools:ignore="DuplicateDefinition">You Cart is Empty !!</string>
