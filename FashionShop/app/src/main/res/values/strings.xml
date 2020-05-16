@@ -15,6 +15,5 @@
     <string name="you_cart_is_empty" tools:ignore="DuplicateDefinition">You Cart is Empty !!</string>
     <string name="rs_0" />
     <string name="grand_total" />
-    <string name="you_cart_is_empty" tools:ignore="DuplicateDefinition">You Cart is Empty !!</string>
     <string name="todo" />
 </resources>
