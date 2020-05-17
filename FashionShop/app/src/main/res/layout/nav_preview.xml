@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/nav_drawer_header_rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="@drawable/navtexture">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/user_profile" />
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="10dp"
+            android:text="&lt;customer_name>"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/customer_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/customer_name"
+            android:layout_alignStart="@+id/customer_name"
+            android:layout_below="@+id/customer_name"
+            android:layout_marginTop="3dp"
+            android:text="&lt;customer_email>"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nav_drawer_header_rel_layout"
+        android:gravity="center">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/button_bar_layout_nav_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/windowBackground"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credits" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ExpandableListView
+            android:id="@+id/exp_navigation_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/button_bar_layout_nav_drawer"
+            android:background="@android:color/white"
+            android:listSelector="@android:color/transparent"></ExpandableListView>
+
+    </RelativeLayout>
+</RelativeLayout>

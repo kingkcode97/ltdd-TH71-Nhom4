@@ -7,9 +7,4 @@ import com.example.fashionshop.models.multiples.CartItems;
 import java.util.List;
 
 public class UpdateCartItemTask {
-    public UpdateCartItemTask(FragmentActivity activity, CartItems cartItems) {
-    }
-
-    public List<Object> execute() {
-    }
 }
