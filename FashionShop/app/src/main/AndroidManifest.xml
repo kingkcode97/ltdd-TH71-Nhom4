@@ -12,9 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
         <activity
+            android:name=".ui.AboutUsActivity"
+            android:parentActivityName=".ui.ShowcaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.fashionshop.ui.ShowcaseActivity" />
+        </activity>
+        <activity
+            android:name=".ui.AuthActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="fullSensor" />
+        <activity
             android:name=".ui.NoNetworkActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="fullSensor"></activity>
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".ui.SplashActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -62,10 +73,6 @@
                 android:value="com.example.fashionshop.ui.CartActivity" />
         </activity>
         <activity
-            android:name=".ui.AuthActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="fullSensor" />
-        <activity
             android:name=".ui.PaymentSuccessActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="fullSensor" />
@@ -85,13 +92,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.fashionshop.ui.ProductListActivity" />
-        </activity>
-        <activity
-            android:name=".ui.AboutUsActivity"
-            android:parentActivityName=".ui.ShowcaseActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.fashionshop.ui.ShowcaseActivity" />
         </activity>
         <activity android:name=".ui.CreditsActivity" />
     </application>
