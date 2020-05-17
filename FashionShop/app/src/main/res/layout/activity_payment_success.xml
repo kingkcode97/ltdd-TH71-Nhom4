@@ -58,7 +58,8 @@
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paymentSuccessIcon" />
+        app:layout_constraintTop_toBottomOf="@+id/paymentSuccessIcon"
+        android:gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/wallet_status_msg_tv"
@@ -71,7 +72,8 @@
         android:textSize="15sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/payment_success_message_label" />
+        app:layout_constraintTop_toBottomOf="@+id/payment_success_message_label"
+        android:gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/deducted_amount_tv"

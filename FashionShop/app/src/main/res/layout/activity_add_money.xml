@@ -34,7 +34,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_money_screen_toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/add_money_screen_toolbar"
+        android:gravity="center_horizontal" />
 
     <Button
         android:id="@+id/add_wallet_money_button"

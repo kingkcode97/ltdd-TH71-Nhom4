@@ -34,7 +34,8 @@
             android:layout_height="wrap_content"
             android:text="@string/disclaimer"
             android:textAlignment="center"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal" />
     </LinearLayout>
 
     <TextView
