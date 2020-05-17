@@ -1,71 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout9"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.fashionshop.ui.NoNetworkActivity">
+    tools:context=".ui.NoNetworkActivity">
+
 
     <ImageView
         android:id="@+id/noNetworkIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="101dp"
+        android:layout_marginTop="160dp"
         android:src="@drawable/nonetworkicon"
-        custom:layout_constraintLeft_toLeftOf="parent"
-        custom:layout_constraintRight_toRightOf="parent"
-        custom:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="No Internet Connectivity"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        custom:layout_constraintLeft_toLeftOf="parent"
-        custom:layout_constraintRight_toRightOf="parent"
-        custom:layout_constraintTop_toBottomOf="@+id/noNetworkIcon" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="You Need to be connected to Internet"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        custom:layout_constraintBottom_toBottomOf="parent"
-        custom:layout_constraintLeft_toLeftOf="parent"
-        custom:layout_constraintRight_toRightOf="parent"
-        custom:layout_constraintTop_toTopOf="parent" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toTopOf="@+id/textView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noNetworkIcon" />
 
     <ImageView
         android:id="@+id/refreshIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:clickable="true"
         android:src="@drawable/refresh"
-        custom:layout_constraintLeft_toLeftOf="parent"
-        custom:layout_constraintRight_toRightOf="parent"
-        custom:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintBottom_toTopOf="@+id/progressBarNoNetWork"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
-    <com.example.fashionshop.utils.DotProgressBar
-        android:id="@+id/dot_progress_bar_no_network"
-        android:layout_width="130dp"
-        android:layout_height="25dp"
-        android:layout_gravity="center|bottom"
-        android:layout_marginTop="53dp"
-        android:visibility="gone"
-        custom:amount="3"
-        custom:duration="@android:integer/config_mediumAnimTime"
-        custom:endColor="@color/light_blue_A400"
-        custom:layout_constraintLeft_toLeftOf="parent"
-        custom:layout_constraintRight_toRightOf="parent"
-        custom:layout_constraintTop_toBottomOf="@+id/refreshIcon"
-        custom:startColor="@color/light_blue_A700" />
+    <ProgressBar
+        android:id="@+id/progressBarNoNetWork"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

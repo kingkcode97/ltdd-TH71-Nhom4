@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
         <activity
+            android:name=".ui.NoNetworkActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="fullSensor"></activity>
+        <activity
             android:name=".ui.SplashActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="fullSensor">
@@ -57,10 +61,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.fashionshop.ui.CartActivity" />
         </activity>
-        <activity
-            android:name=".ui.NoNetworkActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="fullSensor" />
         <activity
             android:name=".ui.AuthActivity"
             android:configChanges="orientation|keyboardHidden"
