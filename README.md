@@ -19,7 +19,7 @@
   Picasso
   Volley
 ```
-+ Tham khảo:  
+   - Tham khảo:  
        + https://viblo.asia/p/su-dung-thu-vien-picasso-de-load-anh-trong-android-eW65Gde9KDO
        + https://viblo.asia/p/android-volley-library-YAQrMJb7M40E
                   
