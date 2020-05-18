@@ -28,4 +28,3 @@
   Django 
   Postgres
 ```
-+ Tham khảo: https://jkutner.github.io/2016/08/18/android-backend-api-heroku-retrofit.html
