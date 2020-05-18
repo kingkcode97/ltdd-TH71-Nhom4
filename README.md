@@ -25,6 +25,7 @@
                   
 #### Tạo **Backend APIs** với:
 ```
-  Django 
+  Retrofit
+  Django Rest Framework
   Postgres
 ```
