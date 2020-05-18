@@ -7,8 +7,8 @@
 ----
 - **Native libraries**
 ```
-   - RecyclerView
-   - CardView
+   RecyclerView
+   CardView
 ```
    - Tham khảo:  
        + https://viblo.asia/p/ban-biet-gi-ve-recyclerview-Do754j8QZM6
@@ -16,17 +16,16 @@
      
 - **Third party libraries**
 ```
-  - Picasso
-  - Volley
+  Picasso
+  Volley
 ```
-  - Tham khảo:  
++ Tham khảo:  
        + https://viblo.asia/p/su-dung-thu-vien-picasso-de-load-anh-trong-android-eW65Gde9KDO
        + https://viblo.asia/p/android-volley-library-YAQrMJb7M40E
                   
 - Tạo **Backend APIs** với:
 ```
-  - Django 
-  - Postgres
+  Django 
+  Postgres
 ```
-
-  - Tham khảo: https://jkutner.github.io/2016/08/18/android-backend-api-heroku-retrofit.html
++ Tham khảo: https://jkutner.github.io/2016/08/18/android-backend-api-heroku-retrofit.html
