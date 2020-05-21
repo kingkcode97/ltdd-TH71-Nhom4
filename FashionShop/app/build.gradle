@@ -4,8 +4,6 @@ android {
     compileSdkVersion 28
     buildToolsVersion '28.0.3'
 
-    useLibrary 'org.apache.http.legacy'
-
     defaultConfig {
         applicationId "com.example.fashionshop"
         minSdkVersion 15
@@ -14,6 +12,8 @@ android {
         versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
     }
 
     buildTypes {
@@ -58,4 +58,5 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'com.daimajia.slider:library:1.1.5@aar'
     implementation 'com.google.android.material:material:1.2.0-alpha06'
+    implementation 'com.github.jrvansuita:GaussianBlur:v1.0.3'
 }

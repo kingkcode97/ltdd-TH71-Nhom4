@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="loginBtn" type="id" />
+
     <item name="product_id_textview" type="id" />
     <item name="price_offer" type="id" />
     <item name="price_mrp" type="id" />
