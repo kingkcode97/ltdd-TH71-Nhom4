@@ -4,6 +4,9 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#000000</item>
+        <item name="colorControlActivated">#28c99e</item>
+        <item name="colorControlHighlight">#d94ed0</item>
     </style>
     <!-- Login TextInput theme. -->
     <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
