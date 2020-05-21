@@ -13,7 +13,7 @@
         android:layout_height="64dp"
         android:background="@drawable/button"
         android:fontFamily="@font/dancing_script_bold"
-        android:text="Bỏ qua"
+        android:text="Thoát"
         android:textAllCaps="false"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

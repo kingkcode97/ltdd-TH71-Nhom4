@@ -26,6 +26,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(WelcomeActivity.this, LoginActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.anim_enter, R.anim.anim_exit);
             }
         });
 

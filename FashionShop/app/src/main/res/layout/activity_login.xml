@@ -55,19 +55,20 @@
         app:layout_constraintTop_toBottomOf="@+id/loginBtn2"
         app:layout_constraintVertical_bias="0.96" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="49dp"
-        android:layout_height="28dp"
-        android:layout_marginBottom="324dp"
+    <Button
+        android:id="@+id/loginBtn2"
+        android:layout_width="162dp"
+        android:layout_height="53dp"
+        android:background="@drawable/button"
         android:fontFamily="@font/dancing_script_bold"
-        android:text="Help?"
-        android:textColor="@color/red_900"
+        android:text="Đăng Nhập"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.789"
-        app:layout_constraintStart_toEndOf="@+id/loginBtn2" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513" />
 
     <TextView
         android:id="@+id/textView7"
@@ -77,37 +78,11 @@
         android:textSize="18sp"
         app:fontFamily="@font/dancing_script_bold"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
-        app:layout_constraintHorizontal_bias="0.581"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/loginBtn2"
-        app:layout_constraintVertical_bias="0.313" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="80dp"
-        android:layout_height="5dp"
-        android:background="#E91E63"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.737"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginBtn2"
-        app:layout_constraintVertical_bias="0.274"
-        app:srcCompat="@drawable/line" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="81dp"
-        android:layout_height="4dp"
-        android:background="#E91E63"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginBtn2"
-        app:layout_constraintVertical_bias="0.273"
-        app:srcCompat="@drawable/line" />
+        app:layout_constraintVertical_bias="0.39" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -116,10 +91,10 @@
         android:background="@drawable/button"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.293"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn2"
+        app:layout_constraintVertical_bias="0.778"
         app:srcCompat="@drawable/buttonfacebook" />
 
     <ImageButton
@@ -129,27 +104,53 @@
         android:background="@drawable/button"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.299"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn2"
+        app:layout_constraintVertical_bias="0.786"
         app:srcCompat="@drawable/buttontwitter" />
 
-    <Button
-        android:id="@+id/loginBtn2"
-        android:layout_width="162dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="300dp"
-        android:background="@drawable/button"
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="80dp"
+        android:layout_height="5dp"
+        android:background="#E91E63"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn2"
+        app:layout_constraintVertical_bias="0.698"
+        app:srcCompat="@drawable/line" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="49dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="292dp"
         android:fontFamily="@font/dancing_script_bold"
-        android:text="Đăng Nhập"
+        android:text="Help?"
+        android:textColor="@color/red_900"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toEndOf="@+id/loginBtn2"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.62" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="80dp"
+        android:layout_height="5dp"
+        android:background="#E91E63"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn2"
+        app:layout_constraintVertical_bias="0.713"
+        app:srcCompat="@drawable/line" />
 
     <ImageView
         android:id="@+id/backBtn"

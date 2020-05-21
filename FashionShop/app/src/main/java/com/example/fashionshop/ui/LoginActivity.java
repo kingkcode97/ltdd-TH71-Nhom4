@@ -1,7 +1,9 @@
 package com.example.fashionshop.ui;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -34,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.anim_back, R.anim.anim_exit);
             }
         });
 
@@ -42,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.anim_enter, R.anim.anim_exit);
             }
         });
 
@@ -69,6 +73,11 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                if (s.length() == 0) {
+                    passwordWrapper.setError("Bạn phải nhập Mật Khẩu");
+                } else {
+                    passwordWrapper.setError(null);
+                }
 
             }
         });
@@ -92,6 +101,11 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                if (s.length() == 0) {
+                    passwordWrapper.setError("Bạn phải nhập Mật Khẩu");
+                } else {
+                    passwordWrapper.setError(null);
+                }
 
             }
         });
