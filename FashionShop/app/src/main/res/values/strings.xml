@@ -23,9 +23,10 @@
     <string name="second_fragment_label">Second fragment label</string>
     <string name="home">Home</string>
     <string name="mall">Mall</string>
-    <string name="cart">Giỏ hàng</string>
-    <string name="user">Cá nhân</string>
+    <string name="cart">Giá» hÃ ng</string>
+    <string name="user">CÃ¡ nhÃ¢n</string>
     <string name="content_description_end_icon">meomeo</string>
-    <string name="username">Tên đăng nhập</string>
-    <string name="password">Mật khẩu</string>
+    <string name="username">TÃªn Ä‘Äƒng nháº­p</string>
+    <string name="password">Máº­t kháº©u</string>
+
 </resources>

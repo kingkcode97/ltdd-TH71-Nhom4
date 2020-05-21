@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.fashionshop"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -14,6 +14,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         renderscriptTargetApi 19
         renderscriptSupportModeEnabled true
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -59,5 +60,9 @@ dependencies {
     implementation 'com.daimajia.slider:library:1.1.5@aar'
     implementation 'com.google.android.material:material:1.2.0-alpha06'
     implementation 'com.github.jrvansuita:GaussianBlur:v1.0.3'
-    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
+    implementation "androidx.annotation:annotation:1.1.0"
+    // To use the Java-compatible @Experimental API annotation
+    implementation "androidx.annotation:annotation-experimental:1.0.0"
 }

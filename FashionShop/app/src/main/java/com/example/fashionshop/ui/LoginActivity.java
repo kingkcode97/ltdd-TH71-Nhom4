@@ -1,113 +1,78 @@
 package com.example.fashionshop.ui;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.DialogInterface;
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.os.Handler;
+import android.util.Pair;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.ImageButton;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.fashionshop.R;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
-    ImageView backButton;
-    Button loginButton;
+    private ImageButton btRegister;
+    private TextView tvLogin, tvDesc;
+    private Button loginButton;
+    private ScrollView sv;
+    private Animation svAnim;
+    private Toolbar bgHeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        backButton = findViewById(R.id.backBtn);
-        loginButton = findViewById(R.id.loginBtn2);
+        btRegister  = findViewById(R.id.btRegister);
+        tvLogin     = findViewById(R.id.tvLogin);
+        tvDesc     = findViewById(R.id.tvDesc);
+        loginButton = findViewById(R.id.loginBt);
+        bgHeader = findViewById(R.id.bgHeader);
+        sv = findViewById(R.id.sv);
+        btRegister.setOnClickListener(this);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.anim_back, R.anim.anim_exit);
-            }
-        });
+//        bgHeader.animate().translationY(500).setDuration(800).setStartDelay(300);
+
+        svAnim = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        sv.animate();
+        sv.startAnimation(svAnim);
+        tvDesc.animate();
+        tvDesc.startAnimation(svAnim);
+        tvLogin.animate();
+        tvLogin.startAnimation(svAnim);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.anim_enter, R.anim.anim_exit);
             }
         });
+    }
 
-        EditText editText = findViewById(R.id.username);
-        EditText editText2 = findViewById(R.id.password);
-        TextView usernameWrapper = findViewById(R.id.usernameWrapper);
-        TextView passwordWrapper = findViewById(R.id.passwordWrapper);
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                if (s.length() == 0) {
-                    usernameWrapper.setError("Bạn phải nhập Tên Đăng Nhập");
-                } else {
-                    usernameWrapper.setError(null);
-                }
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                if (s.length() == 0) {
-                    passwordWrapper.setError("Bạn phải nhập Mật Khẩu");
-                } else {
-                    passwordWrapper.setError(null);
-                }
-
-            }
-        });
-
-        editText2.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                if (s.length() == 0) {
-                    passwordWrapper.setError("Bạn phải nhập Mật Khẩu");
-                } else {
-                    passwordWrapper.setError(null);
-                }
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                if (s.length() == 0) {
-                    passwordWrapper.setError("Bạn phải nhập Mật Khẩu");
-                } else {
-                    passwordWrapper.setError(null);
-                }
-
-            }
-        });
+    @Override
+    public void onClick(View v) {
+        if (v==btRegister){
+            Intent intent   = new Intent(LoginActivity.this, RegisterActivity.class);
+            Pair[] pairs    = new Pair[1];
+            pairs[0] = new Pair<View,String>(tvLogin,"tvLogin");
+            ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this, pairs);
+            startActivity(intent,activityOptions.toBundle());
+        }
     }
 }
