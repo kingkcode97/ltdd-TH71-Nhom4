@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui;
+package com.FourFashionShop.ui.fragment;
 
 import android.os.Bundle;
 
