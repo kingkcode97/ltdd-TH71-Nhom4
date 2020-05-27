@@ -2,16 +2,13 @@ package com.FourFashionShop.ui;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.FourFashionShop.R;
 
@@ -48,5 +45,6 @@ public class LoginActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.anim_enter, R.anim.anim_exit);
             }
         });
+
     }
 }

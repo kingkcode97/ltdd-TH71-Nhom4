@@ -14,12 +14,12 @@
         <ImageView
             android:id="@+id/imgItem"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="200dp"
             android:background="#2d2d2d"
             android:scaleType="centerCrop" />
 
         <TextView
-            android:id="@+id/text_Item1"
+            android:id="@+id/text_Title1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="left"
@@ -28,7 +28,7 @@
             android:textSize="15dp" />
 
         <TextView
-            android:id="@+id/text_Item2"
+            android:id="@+id/text_Title2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="left"

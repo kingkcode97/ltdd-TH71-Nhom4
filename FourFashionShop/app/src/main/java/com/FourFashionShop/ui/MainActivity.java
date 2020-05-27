@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.FourFashionShop.R;
+import com.FourFashionShop.ui.Fragment.AccountFragment;
+import com.FourFashionShop.ui.Fragment.CartFragment;
+import com.FourFashionShop.ui.Fragment.HomeFragment;
+import com.FourFashionShop.ui.Fragment.MallFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
@@ -21,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        //frameLayout = findViewById(R.id.container);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 

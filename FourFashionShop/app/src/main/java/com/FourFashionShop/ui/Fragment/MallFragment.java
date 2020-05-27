@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui;
+package com.FourFashionShop.ui.Fragment;
 
 import android.os.Bundle;
 
@@ -18,7 +18,7 @@ import com.FourFashionShop.ui.Mall_Item_Fragment.Mall_Item4;
 import com.FourFashionShop.ui.Mall_Item_Fragment.Mall_Item5;
 import com.google.android.material.tabs.TabLayout;
 
-import Adapter.ViewPagerAdapter;
+import com.FourFashionShop.ui.Adapter.ViewPagerAdapter;
 
 public class MallFragment extends Fragment {
     private View view;

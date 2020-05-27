@@ -28,4 +28,12 @@
     <string name="content_description_end_icon">meomeo</string>
     <string name="username">Tên đăng nhập</string>
     <string name="password">Mật khẩu</string>
+    <string name="Name">Họ và tên</string>
+    <string name="Phone">Số điện thoại</string>
+    <string name="Address">Địa chỉ</string>
+    <string name="City">Thành phố</string>
+    <string name="Email">Email</string>
+    <string name="Update">Cập nhật</string>
+    <string name="female">Nữ</string>
+    <string name="male">Nam</string>
 </resources>
