@@ -36,4 +36,7 @@
     <string name="Update">Cập nhật</string>
     <string name="female">Nữ</string>
     <string name="male">Nam</string>
+
+    <string name="Button_DatHang">Tiến Hành Đặt Hàng</string>
+    <string name="txt_ThanhTien">Thành tiền: </string>
 </resources>
