@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.fragment;
+package com.FourFashionShop.ui.Fragment;
 
 import android.app.Notification;
 import android.content.Intent;
@@ -24,8 +24,8 @@ import android.widget.Toast;
 import com.FourFashionShop.R;
 import com.FourFashionShop.ui.CartModel;
 import com.FourFashionShop.ui.UserInfoActivity;
-import com.FourFashionShop.ui.adapter.AccountAdapter;
-import com.FourFashionShop.ui.adapter.CartAdapter;
+import com.FourFashionShop.ui.Adapter.AccountAdapter;
+import com.FourFashionShop.ui.Adapter.CartAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
