@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.adapter;
+package com.FourFashionShop.ui.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.FourFashionShop.R;
 import com.FourFashionShop.ui.CartModel;
-import com.FourFashionShop.ui.fragment.CartItemClickListener;
 
 import java.util.List;
 
