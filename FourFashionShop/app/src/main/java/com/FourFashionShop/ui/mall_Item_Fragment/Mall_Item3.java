@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.Mall_Item_Fragment;
+package com.FourFashionShop.ui.mall_Item_Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

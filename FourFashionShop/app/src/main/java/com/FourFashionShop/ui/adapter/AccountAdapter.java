@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.Adapter;
+package com.FourFashionShop.ui.adapter;
 
 
 import android.content.Context;

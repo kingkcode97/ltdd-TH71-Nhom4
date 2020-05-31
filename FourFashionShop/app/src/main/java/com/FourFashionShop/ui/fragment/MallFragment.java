@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.Fragment;
+package com.FourFashionShop.ui.fragment;
 
 import android.os.Bundle;
 
@@ -11,14 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.ui.Mall_Item_Fragment.Mall_Item1;
-import com.FourFashionShop.ui.Mall_Item_Fragment.Mall_Item2;
-import com.FourFashionShop.ui.Mall_Item_Fragment.Mall_Item3;
-import com.FourFashionShop.ui.Mall_Item_Fragment.Mall_Item4;
-import com.FourFashionShop.ui.Mall_Item_Fragment.Mall_Item5;
+import com.FourFashionShop.ui.mall_Item_Fragment.Mall_Item1;
+import com.FourFashionShop.ui.mall_Item_Fragment.Mall_Item2;
+import com.FourFashionShop.ui.mall_Item_Fragment.Mall_Item3;
+import com.FourFashionShop.ui.mall_Item_Fragment.Mall_Item4;
+import com.FourFashionShop.ui.mall_Item_Fragment.Mall_Item5;
 import com.google.android.material.tabs.TabLayout;
 
-import com.FourFashionShop.ui.Adapter.ViewPagerAdapter;
+import com.FourFashionShop.ui.adapter.ViewPagerAdapter;
 
 public class MallFragment extends Fragment {
     private View view;

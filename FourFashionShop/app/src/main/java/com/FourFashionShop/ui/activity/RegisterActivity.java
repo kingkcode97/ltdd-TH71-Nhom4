@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui;
+package com.FourFashionShop.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

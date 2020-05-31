@@ -1,7 +1,5 @@
-package com.FourFashionShop.ui.Fragment;
+package com.FourFashionShop.ui.fragment;
 
-import android.app.Notification;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
@@ -10,22 +8,17 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.telecom.TelecomManager;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.FourFashionShop.R;
 import com.FourFashionShop.ui.CartModel;
-import com.FourFashionShop.ui.UserInfoActivity;
-import com.FourFashionShop.ui.Adapter.AccountAdapter;
-import com.FourFashionShop.ui.Adapter.CartAdapter;
+import com.FourFashionShop.ui.adapter.CartAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

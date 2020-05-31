@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview_mall_id"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
     android:layout_width="180dp"
-    android:layout_height="230dp"
-    android:layout_marginRight="5dp"
+    android:layout_height="240dp"
+    android:layout_marginBottom="3dp"
     cardview:cardCornerRadius="5dp">
 
     <LinearLayout
@@ -12,29 +15,30 @@
         android:orientation="vertical">
 
         <ImageView
+            android:layout_marginBottom="5dp"
             android:id="@+id/imgItem"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="170dp"
             android:background="#2d2d2d"
             android:scaleType="centerCrop" />
 
         <TextView
-            android:id="@+id/text_Title1"
+            android:id="@+id/text_Title"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:gravity="left"
-            android:text="mlemmmm"
+            android:text="Áo mlem mlem lem lem mmmmmmmmmmmm"
             android:textColor="#2d2d2d"
             android:textSize="15dp" />
 
         <TextView
-            android:id="@+id/text_Title2"
+            android:id="@+id/text_Price"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="left"
-            android:text="abc"
+            android:text="200,000 ₫"
             android:textColor="@color/Red"
-            android:textSize="13dp" />
+            android:textSize="15dp" />
     </LinearLayout>
 
 

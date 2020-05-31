@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui;
+package com.FourFashionShop.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -42,4 +42,6 @@ public class SplashActivity extends AppCompatActivity{
             }
         }, SPLASH_DELAY);
     }
+
+
 }

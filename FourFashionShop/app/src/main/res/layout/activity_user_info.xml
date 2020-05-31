@@ -9,7 +9,7 @@
     android:layout_marginLeft="24dp"
     android:layout_marginRight="24dp"
     android:gravity="center"
-    tools:context=".ui.UserInfoActivity">
+    tools:context=".ui.activity.UserInfoActivity">
 
 <!--    <com.google.android.material.textfield.TextInputLayout-->
 <!--        android:layout_width="match_parent"-->

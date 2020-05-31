@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.Mall_Item_Fragment;
+package com.FourFashionShop.ui.mall_Item_Fragment;
 
 import android.os.Bundle;
 
@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.ui.Adapter.RecyclerViewAdapter;
+import com.FourFashionShop.ui.adapter.MallAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class Mall_Item1 extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_mall__item1, container, false);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_item1);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(), items);
+        MallAdapter adapter = new MallAdapter(getContext(), items);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         recyclerView.setAdapter(adapter);
         return view;
@@ -43,13 +43,16 @@ public class Mall_Item1 extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         items = new ArrayList<>();
-        items.add(new Item("Title1", "Title2", "category", "des", R.drawable.item1));
-        items.add(new Item("Title1", "Title2", "category", "des", R.drawable.item1));
-        items.add(new Item("Title1", "Title2", "category", "des", R.drawable.item1));
-        items.add(new Item("Title1", "Title2", "category", "des", R.drawable.item1));
-        items.add(new Item("Title1", "Title2", "category", "des", R.drawable.item1));
-        items.add(new Item("Title1", "Title2", "category", "des", R.drawable.item1));
-        items.add(new Item("Title1", "Title2", "category", "des", R.drawable.item1));
+        items.add(new Item("21312", "232131", R.drawable.item1));
+        items.add(new Item("Title123","500k", R.drawable.item1));
+        items.add(new Item("Title","Price", R.drawable.item1));
+        items.add(new Item("Title","Price", R.drawable.item1));
+        items.add(new Item("Title","Price", R.drawable.item1));
+        items.add(new Item("Title","Price", R.drawable.item1));
+        items.add(new Item("Title","Price", R.drawable.item1));
+        items.add(new Item("Title","Price", R.drawable.item1));
+        items.add(new Item("Title","Price", R.drawable.item1));
+
 
     }
 }

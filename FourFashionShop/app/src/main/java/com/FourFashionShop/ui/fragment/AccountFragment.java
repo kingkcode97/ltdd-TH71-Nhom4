@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.Fragment;
+package com.FourFashionShop.ui.fragment;
 
 
 import android.content.Intent;
@@ -17,8 +17,8 @@ import android.widget.Toast;
 
 import com.FourFashionShop.R;
 import com.FourFashionShop.ui.AccountModel;
-import com.FourFashionShop.ui.UserInfoActivity;
-import com.FourFashionShop.ui.Adapter.AccountAdapter;
+import com.FourFashionShop.ui.activity.UserInfoActivity;
+import com.FourFashionShop.ui.adapter.AccountAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
