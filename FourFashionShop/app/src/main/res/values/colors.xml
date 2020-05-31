@@ -9,7 +9,7 @@
     <color name="colorPrimaryDark">#EC407A</color>
     <color name="textColorPrimary">#FFFFFF</color>
     <color name="windowBackground">#FFFFFF</color>
-    <color name="navigationBarColor">#000000</color>
+    <color name="navigationBarColor">#FFFFFF</color>
     <color name="colorAccent">#E91E63</color>
     <color name="Red">#ff0000</color>
     <color name="darkRed">#8B0000</color>

@@ -1,32 +1,49 @@
 package com.FourFashionShop.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.RelativeLayout;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.FourFashionShop.R;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private RelativeLayout rlayout;
-    private Animation animation;
+    private Button btnRegister;
+    private TextView txtLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        Toolbar toolbar = findViewById(R.id.bgHeader);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        rlayout = findViewById(R.id.rlayout);
-        animation = AnimationUtils.loadAnimation(this,R.anim.uptodowndiagonal);
-        rlayout.setAnimation(animation);
+        btnRegister = findViewById(R.id.btnRegister);
+        txtLogin = findViewById(R.id.txtLogin);
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.anim_enter, R.anim.anim_exit);
+
+                Toast.makeText(RegisterActivity.this,
+                        "Đăng kí thành công", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        txtLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.anim_enter, R.anim.anim_exit);
+            }
+        });
     }
 
     @Override

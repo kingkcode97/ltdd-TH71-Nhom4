@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.FourFashionShop.R;
 
@@ -37,9 +38,12 @@ public class SplashActivity extends AppCompatActivity{
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, WelcomeActivity.class);
+                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         }, SPLASH_DELAY);
+
+        Toast.makeText(SplashActivity.this,
+                "Welcome to 4 Fashion Shop", Toast.LENGTH_SHORT).show();
     }
 }
