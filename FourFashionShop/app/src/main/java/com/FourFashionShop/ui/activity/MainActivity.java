@@ -1,10 +1,10 @@
 package com.FourFashionShop.ui.activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.FourFashionShop.R;
 import com.FourFashionShop.ui.fragment.AccountFragment;

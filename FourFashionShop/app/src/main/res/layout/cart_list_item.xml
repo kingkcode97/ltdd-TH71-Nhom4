@@ -6,13 +6,12 @@
     android:layout_height="wrap_content"
     app:cardElevation="4dp"
     app:cardCornerRadius="3dp"
-    app:cardUseCompatPadding="true"
+    android:layout_margin="2dp"
     >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp">
+        android:layout_height="match_parent" >
 
         <ImageView
             android:id="@+id/imagePro"

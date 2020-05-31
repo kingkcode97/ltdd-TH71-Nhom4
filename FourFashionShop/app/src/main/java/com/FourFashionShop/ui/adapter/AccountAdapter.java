@@ -65,6 +65,7 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.MyViewHo
             itemView.setOnTouchListener(itemTouchListener);
         }
     }
+
     private View.OnTouchListener itemTouchListener = new View.OnTouchListener() {
 
         @Override

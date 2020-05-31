@@ -7,8 +7,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/fragment_account_layout"
+<<<<<<< HEAD
     android:background="@color/grey_400"
     tools:context=".ui.fragment.AccountFragment">
+=======
+    android:background="@color/grey_300"
+    tools:context=".ui.Fragment.AccountFragment">
+>>>>>>> f004ec52c1fce23536c55f88053da0616eb0b61a
+
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -36,14 +42,30 @@
             android:text="Meo meo meo" />
     </LinearLayout>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewAccount"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
+    <LinearLayout
+        android:gravity="bottom"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:layout_margin="16dp"
+            android:text="Đăng xuất"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </LinearLayout>
