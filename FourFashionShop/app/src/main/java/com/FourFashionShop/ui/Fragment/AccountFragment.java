@@ -66,6 +66,9 @@ public class AccountFragment extends Fragment {
                 new RecyclerItemClickListener(getContext(), recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
                     @Override public void onItemClick(View view, int position) {
                         // do whatever
+//                        Fragment fragment;
+//                        FragmentManager fragmentManager;
+//                        FragmentTransaction fragmentTransaction;
                         Toast.makeText(getContext(), "Recycle Click" + position, Toast.LENGTH_SHORT).show();
                         switch (position)
                         {
@@ -86,9 +89,11 @@ public class AccountFragment extends Fragment {
 
                                 break;
                             case 5:
-
-                                break;
-                            case 6:
+                                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                SupportFragment supportFragment = new SupportFragment();
+                                activity.getSupportFragmentManager().beginTransaction()
+                                        .replace(R.id.fragment_account_layout, supportFragment)
+                                        .addToBackStack(null).commit();
 
                                 break;
 
