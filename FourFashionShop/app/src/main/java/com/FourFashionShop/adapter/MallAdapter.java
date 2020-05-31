@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.adapter;
+package com.FourFashionShop.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,15 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.ui.activity.Mall_Product_Activity;
-import com.FourFashionShop.ui.mall_Item_Fragment.Item;
+import com.FourFashionShop.ui.Mall_Product_Activity;
+import com.FourFashionShop.mall_Item_Fragment.Item;
 
 import java.util.List;
 

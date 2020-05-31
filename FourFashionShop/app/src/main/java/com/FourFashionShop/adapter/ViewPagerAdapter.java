@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.adapter;
+package com.FourFashionShop.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

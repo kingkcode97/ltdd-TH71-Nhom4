@@ -1,10 +1,12 @@
-package com.FourFashionShop.ui.Fragment;
+package com.FourFashionShop.fragment;
 
+import androidx.fragment.app.Fragment;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,7 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.ui.Adapter.SupportAdapter;
+import com.FourFashionShop.adapter.SupportAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,11 +47,11 @@ public class SupportFragment extends Fragment {
         stringList.add("Chính sách bảo mật thông tin");
         stringList.add("Chính sách bảo mặt ứng dụng");
         stringList.add("Chính sách giải quyết khiếu nại");
-        stringList.add("Qui chế ứng dụng");
+        stringList.add("Qui chế ứng dụng\n");
         stringList.add("Điều khoản sử dụng");
 
     }
-
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

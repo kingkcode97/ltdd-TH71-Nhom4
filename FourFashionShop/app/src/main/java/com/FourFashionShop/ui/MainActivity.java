@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.activity;
+package com.FourFashionShop.ui;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -7,10 +7,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.ui.fragment.AccountFragment;
-import com.FourFashionShop.ui.fragment.CartFragment;
-import com.FourFashionShop.ui.fragment.HomeFragment;
-import com.FourFashionShop.ui.fragment.MallFragment;
+import com.FourFashionShop.fragment.AccountFragment;
+import com.FourFashionShop.fragment.CartFragment;
+import com.FourFashionShop.fragment.HomeFragment;
+import com.FourFashionShop.fragment.MallFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{

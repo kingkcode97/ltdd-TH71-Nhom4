@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.adapter;
+package com.FourFashionShop.adapter;
 
 
 import android.content.Context;
@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.ui.AccountModel;
+import com.FourFashionShop.AccountModel;
 import java.util.List;
 
 public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.MyViewHolder> {

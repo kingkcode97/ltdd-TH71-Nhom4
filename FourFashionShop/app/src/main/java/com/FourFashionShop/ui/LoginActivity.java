@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.activity;
+package com.FourFashionShop.ui;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;

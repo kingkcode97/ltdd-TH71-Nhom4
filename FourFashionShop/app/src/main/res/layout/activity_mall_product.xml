@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activity.Mall_Product_Activity">
+    tools:context=".ui.Mall_Product_Activity">
 
     <ImageView
         android:layout_marginBottom="20dp"
@@ -18,7 +18,7 @@
         android:id="@+id/text_Title_Item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="20dp"
         android:text="Title"
@@ -28,7 +28,7 @@
         android:id="@+id/text_Price_Item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="20dp"
         android:gravity="left"
         android:text="200,000 ₫"
@@ -38,7 +38,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="20dp"
         android:orientation="horizontal">
 
@@ -84,7 +84,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtTotalPrice"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="30dp"

@@ -1,10 +1,11 @@
-package com.FourFashionShop.ui.activity;
+package com.FourFashionShop.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -55,8 +56,8 @@ public class Mall_Product_Activity extends AppCompatActivity {
         btSizeS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btSizeS.setBackgroundResource(R.drawable.button);
                 btSizeS.setBackgroundResource(R.color.pink_200);
+                btSizeS.setBackgroundResource(R.drawable.button);
             }
         });
     }

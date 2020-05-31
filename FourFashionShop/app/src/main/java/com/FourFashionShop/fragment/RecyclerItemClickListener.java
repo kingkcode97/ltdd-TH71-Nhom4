@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.fragment;
+package com.FourFashionShop.fragment;
 
 import android.content.Context;
 import android.view.GestureDetector;

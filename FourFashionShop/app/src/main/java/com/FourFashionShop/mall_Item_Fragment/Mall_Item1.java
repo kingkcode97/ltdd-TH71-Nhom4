@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.mall_Item_Fragment;
+package com.FourFashionShop.mall_Item_Fragment;
 
 import android.os.Bundle;
 
@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.ui.adapter.MallAdapter;
+import com.FourFashionShop.adapter.MallAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

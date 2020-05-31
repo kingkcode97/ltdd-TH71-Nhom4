@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.FullScreen">
-        <activity android:name=".ui.activity.Mall_Product_Activity" />
+        <activity android:name=".ui.Mall_Product_Activity" />
         <activity
-            android:name=".ui.activity.UserInfoActivity"
+            android:name=".ui.UserInfoActivity"
             android:theme="@style/Theme.AppCompat.DayNight" />
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name=".ui.MainActivity"
             android:theme="@style/BottomNavigation" />
-        <activity android:name=".ui.activity.LoginActivity" />
-        <activity android:name=".ui.activity.RegisterActivity" />
-        <activity android:name=".ui.activity.WelcomeActivity" />
-        <activity android:name=".ui.activity.SplashActivity">
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.RegisterActivity" />
+        <activity android:name=".ui.WelcomeActivity" />
+        <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

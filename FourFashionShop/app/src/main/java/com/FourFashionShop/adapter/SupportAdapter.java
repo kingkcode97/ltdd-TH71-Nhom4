@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.Adapter;
+package com.FourFashionShop.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
