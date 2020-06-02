@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.FourFashionShop.R;
@@ -16,8 +17,8 @@ import java.util.List;
 
 public class SupportAdapter extends RecyclerView.Adapter<SupportAdapter.MyViewHolder> {
 
-    List<String> stringList;
-    Context context;
+    private List<String> stringList;
+    private Context context;
 
     public SupportAdapter(List<String> stringList, Context context) {
         this.stringList = stringList;
@@ -48,13 +49,13 @@ public class SupportAdapter extends RecyclerView.Adapter<SupportAdapter.MyViewHo
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView textView;
-        LinearLayout linearLayout;
+        ConstraintLayout constraintLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             textView = itemView.findViewById(R.id.textView_support_content);
-            linearLayout = itemView.findViewById(R.id.fragment_support_layout);
+            constraintLayout = itemView.findViewById(R.id.activity_support);
         }
     }
 }

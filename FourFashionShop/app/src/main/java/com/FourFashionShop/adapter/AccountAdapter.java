@@ -19,8 +19,8 @@ import java.util.List;
 
 public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.MyViewHolder> {
 
-    List<AccountModel> accountModels;
-    Context context;
+    private List<AccountModel> accountModels;
+    private Context context;
 
     public AccountAdapter(List<AccountModel> accountModels, Context context) {
         this.accountModels = accountModels;

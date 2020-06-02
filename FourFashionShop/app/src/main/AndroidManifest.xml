@@ -9,6 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.FullScreen">
+        <activity
+            android:theme="@style/Theme.AppCompat.DayNight"
+            android:name=".ui.OrdersManagementActivity"/>
+        <activity
+            android:name=".ui.FavoriteProductActivity"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".ui.ProductsPurchasedActivity"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".ui.SupportActivity"
+            android:theme="@style/Theme.AppCompat.DayNight" />
         <activity android:name=".ui.Mall_Product_Activity" />
         <activity
             android:name=".ui.UserInfoActivity"
