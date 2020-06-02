@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.Fragment;
+package com.FourFashionShop.fragment;
 
 import android.app.Dialog;
 import android.app.Notification;

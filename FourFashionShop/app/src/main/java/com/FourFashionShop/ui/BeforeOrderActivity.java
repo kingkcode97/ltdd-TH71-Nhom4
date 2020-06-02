@@ -24,7 +24,7 @@ import android.widget.Toast;
 import com.FourFashionShop.R;
 import com.FourFashionShop.ui.Adapter.BeforeOrderAdapter;
 import com.FourFashionShop.ui.Adapter.CartAdapter;
-import com.FourFashionShop.ui.Fragment.CartFragment;
+import com.FourFashionShop.fragment.CartFragment;
 
 public class BeforeOrderActivity extends AppCompatActivity {
     private TextView txtContent;
