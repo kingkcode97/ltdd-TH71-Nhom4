@@ -37,6 +37,11 @@
     <string name="female">Nữ</string>
     <string name="male">Nam</string>
 
-    <string name="Button_DatHang">Tiến Hành Đặt Hàng</string>
-    <string name="txt_ThanhTien">Thành tiền: </string>
+    <string name="Button_MuaHang">Mua Hàng</string>
+    <string name="Button_DatHang">Đặt Hàng</string>
+    <string name="txt_ThanhTien">Tạm tính: </string>
+    <string name="Button_ComeHome">Tiếp Tục Mua Hàng</string>
+    <string name="txtTieuDeOrder">Đơn Hàng Của Bạn Đã Hoàn Thành</string>
+    <string name="txtGaoHang">Chọn hình thức giao hàng</string>
+    <string name="HoTen">Họ Và Tên</string>
 </resources>

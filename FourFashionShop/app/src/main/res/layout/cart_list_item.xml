@@ -11,12 +11,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:padding="5dp">
 
         <ImageView
             android:id="@+id/imagePro"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
 
             android:src="@drawable/tra" />
 
@@ -44,7 +45,7 @@
             android:layout_marginRight="10dp"
             android:layout_toRightOf="@id/imagePro"
             android:gravity="center_vertical"
-            android:text="200,000đ"
+            android:text="200,000 đ"
             android:textColor="#ff4d6a"
             android:textSize="18sp"
             android:textStyle="italic" />
@@ -61,25 +62,25 @@
 
             <ImageButton
                 android:id="@+id/imgBtnRemovePro"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:background="#C6C0C0"
                 android:src="@drawable/ic_remove_black_cart" />
 
             <TextView
                 android:id="@+id/txtSoLuong"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:background="#EFE5E5"
                 android:gravity="center_horizontal"
                 android:text="1"
                 android:textAlignment="center"
-                android:textSize="18dp" />
+                android:textSize="18sp" />
 
             <ImageButton
                 android:id="@+id/imgBtnAddPro"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:background="#C6C0C0"
                 android:src="@drawable/ic_add_black_cart" />
 

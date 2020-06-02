@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.FourFashionShop.OrderModel;
+import com.FourFashionShop.model.OrderModel;
 import com.FourFashionShop.R;
 import com.FourFashionShop.adapter.OrdersManagementAdapter;
 

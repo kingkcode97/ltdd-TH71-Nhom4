@@ -1,4 +1,4 @@
-package com.FourFashionShop;
+package com.FourFashionShop.model;
 
 public class AccountModel {
     private int image;
