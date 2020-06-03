@@ -1,19 +1,26 @@
 package com.FourFashionShop.adapter;
 
+import android.app.Dialog;
+import android.bluetooth.le.ScanSettings;
 import android.content.Context;
-import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.ui.Mall_Product_Activity;
 import com.FourFashionShop.mall_Item_Fragment.Item;
 
 import java.util.List;
@@ -22,6 +29,7 @@ public class MallAdapter extends RecyclerView.Adapter<MallAdapter.MyViewHolder> 
 
     Context mContext;
     List<Item> mData;
+    Dialog mDialog;
 
     public MallAdapter(Context mContext, List<Item> mData) {
         this.mContext = mContext;
@@ -33,28 +41,75 @@ public class MallAdapter extends RecyclerView.Adapter<MallAdapter.MyViewHolder> 
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.cardview_item_mall, parent, false);
+        view = mInflater.inflate(R.layout.mall_list_item, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
         holder.text_Title.setText(mData.get(position).getTitle());
         holder.text_Price.setText(mData.get(position).getPrice());
-        holder.imageView.setImageResource(mData.get(position).getThumbnail());
+        holder.imageView.setImageResource(mData.get(position).getImg());
 
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
+        mDialog = new Dialog(mContext);
+        mDialog.setContentView(R.layout.mall_product);
+        mDialog.getWindow().setGravity(Gravity.BOTTOM);
+        mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        holder.mall_list_item.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, Mall_Product_Activity.class);
-                intent.putExtra("Title", mData.get(position).getTitle());
-                intent.putExtra("Price", mData.get(position).getPrice());
-                intent.putExtra("Thumbnail", mData.get(position).getThumbnail());
+                TextView price = mDialog.findViewById(R.id.text_Price_Item);
+                TextView soLuongItem = mDialog.findViewById(R.id.text_SoLuong_Item);
+                ImageView img = mDialog.findViewById(R.id.img_item_id);
 
-                mContext.startActivity(intent);
+                price.setText(mData.get(holder.getAdapterPosition()).getPrice());
+                soLuongItem.setText(mData.get(holder.getAdapterPosition()).getSoLuong());
+                img.setImageResource(mData.get(holder.getAdapterPosition()).getImg());
+                mDialog.show();
+                //dem so luong
+                ImageButton imgBtnAdd = mDialog.findViewById(R.id.imgBtnAdd);
+                ImageButton imgBtnRemove = mDialog.findViewById(R.id.imgBtnRemove);
+                Button addCart = mDialog.findViewById(R.id.add_Cart);
+                final TextView txSoLuong = mDialog.findViewById(R.id.txtSoLuong);
+                txSoLuong.setText(String.valueOf(1));
+                imgBtnAdd.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int soLuong = Integer.parseInt(txSoLuong.getText().toString()) + 1;
+                        txSoLuong.setText(String.valueOf(soLuong));
+                    }
+                });
 
+                imgBtnRemove.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int soLuong = Integer.parseInt(txSoLuong.getText().toString());
+                        if (soLuong > 1)
+                            soLuong = soLuong - 1;
+                        txSoLuong.setText(String.valueOf(soLuong));
+                    }
+                });
+
+                addCart.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mDialog.cancel();
+                    }
+                });
+
+                //xu li button chon size
+                final Button btSizeS = mDialog.findViewById(R.id.sizeS);
+                btSizeS.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        btSizeS.setBackgroundResource(R.drawable.button1);
+                    }
+                });
             }
         });
+
     }
 
     @Override
@@ -63,23 +118,21 @@ public class MallAdapter extends RecyclerView.Adapter<MallAdapter.MyViewHolder> 
     }
 
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
-
-        TextView text_Title;
-        TextView text_Price;
-        ImageView imageView;
-        CardView cardView;
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        private TextView text_Price;
+        private TextView text_Title;
+        private TextView text_SoLuong;
+        private ImageView imageView;
+        private LinearLayout mall_list_item;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            text_Title = (TextView) itemView.findViewById(R.id.text_Title);
-            text_Price = (TextView) itemView.findViewById(R.id.text_Price);
-            imageView = (ImageView) itemView.findViewById(R.id.imgItem);
-            cardView = (CardView) itemView.findViewById(R.id.cardview_mall_id);
+            text_Title = itemView.findViewById(R.id.text_Title);
+            text_Price = itemView.findViewById(R.id.text_Price);
+            imageView = itemView.findViewById(R.id.imgItem);
+            mall_list_item = itemView.findViewById(R.id.mall_list_item);
         }
     }
-
-
 
 }
 

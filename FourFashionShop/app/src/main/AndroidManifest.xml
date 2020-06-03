@@ -21,10 +21,9 @@
         <activity
             android:name=".ui.SupportActivity"
             android:theme="@style/Theme.AppCompat.DayNight" />
-        <activity android:name=".ui.Mall_Product_Activity" />
         <activity
             android:name=".ui.UserInfoActivity"
-            android:theme="@style/Theme.AppCompat.DayNight" />
+            android:theme="@style/AppTheme.FullScreen" />
         <activity
             android:name=".ui.MainActivity"
             android:theme="@style/BottomNavigation" />

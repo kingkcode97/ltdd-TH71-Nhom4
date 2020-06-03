@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.FourFashionShop.R;
 import com.FourFashionShop.adapter.MallAdapter;
@@ -18,12 +21,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Mall_Item1 extends Fragment {
+public class MallItem1 extends Fragment {
     private View view;
     private RecyclerView recyclerView;
     private List<Item> items;
 
-    public Mall_Item1() {
+
+    public MallItem1() {
 
     }
 
@@ -32,6 +36,7 @@ public class Mall_Item1 extends Fragment {
     public View onCreateView(LayoutInflater inflater,@Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_mall__item1, container, false);
+
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_item1);
         MallAdapter adapter = new MallAdapter(getContext(), items);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
@@ -43,16 +48,16 @@ public class Mall_Item1 extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         items = new ArrayList<>();
-        items.add(new Item("21312", "232131", R.drawable.item1));
-        items.add(new Item("Title123","500k", R.drawable.item1));
-        items.add(new Item("Title","Price", R.drawable.item1));
-        items.add(new Item("Title","Price", R.drawable.item1));
-        items.add(new Item("Title","Price", R.drawable.item1));
-        items.add(new Item("Title","Price", R.drawable.item1));
-        items.add(new Item("Title","Price", R.drawable.item1));
-        items.add(new Item("Title","Price", R.drawable.item1));
-        items.add(new Item("Title","Price", R.drawable.item1));
-
+        items.add(new Item("21312", "232131", "3", R.drawable.item2));
+        items.add(new Item("abc", "232131", "4", R.drawable.item2));
+        items.add(new Item("ád", "232131", "5", R.drawable.item2));
+        items.add(new Item("sda", "232131", "36", R.drawable.item2));
+        items.add(new Item("ád", "232131", "37", R.drawable.item2));
+        items.add(new Item("sada", "232131", "83", R.drawable.item2));
+        items.add(new Item("ádas", "232131", "93", R.drawable.item2));
+        items.add(new Item("sadas", "232131", "30", R.drawable.item2));
+        items.add(new Item("2131áaa2", "232131", "32", R.drawable.item2));
 
     }
+
 }

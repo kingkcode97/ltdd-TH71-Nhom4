@@ -3,15 +3,17 @@ package com.FourFashionShop.mall_Item_Fragment;
 public class Item {
     private String Title;
     private String Price;
-    private int Thumbnail;
+    private String SoLuong;
+    private int Img;
 
     public Item() {
     }
 
-    public Item(String title, String price, int thumbnail) {
+    public Item(String title, String price, String soLuong, int img) {
         Title = title;
         Price = price;
-        Thumbnail = thumbnail;
+        SoLuong = soLuong;
+        Img = img;
     }
 
     public String getTitle() {
@@ -30,11 +32,19 @@ public class Item {
         Price = price;
     }
 
-    public int getThumbnail() {
-        return Thumbnail;
+    public String getSoLuong() {
+        return SoLuong;
     }
 
-    public void setThumbnail(int thumbnail) {
-        Thumbnail = thumbnail;
+    public void setSoLuong(String soLuong) {
+        SoLuong = soLuong;
+    }
+
+    public int getImg() {
+        return Img;
+    }
+
+    public void setImg(int img) {
+        Img = img;
     }
 }
