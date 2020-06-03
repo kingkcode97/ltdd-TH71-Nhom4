@@ -24,6 +24,12 @@ public class LocationUserActivity extends AppCompatActivity {
         actionBar.setTitle("Thêm Địa Chỉ Giao Hàng");
 
         btSaveLocation = findViewById(R.id.btSaveLocation);
+        btnNhaRieng = findViewById(R.id.btnNhaRieng);
+        btnNhaRieng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
 
         btSaveLocation.setOnClickListener(new View.OnClickListener() {
             @Override

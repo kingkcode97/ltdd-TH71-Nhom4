@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -33,11 +34,12 @@ public class BeforeOrderActivity extends AppCompatActivity {
     private Button btnBeforeOrder;
     private LinearLayout lnLocation;
     private RadioButton rdGiaoNhanh, rdGiaoHomSau, rdGiaoTC;
+    private RadioGroup rgGiaoHang;
     private TextView txtShip;
-    double shipGiaoNhanh = 60000;
-    double shipHomSau = 30000;
-    double shipGiaoTC = 20000;
-    private int flag = 0;
+    int shipGiaoNhanh = 60000;
+    int shipHomSau = 30000;
+    int shipGiaoTC = 20000;
+    private int flag = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,32 +76,78 @@ public class BeforeOrderActivity extends AppCompatActivity {
             }
         });
 
+        rdGiaoNhanh.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
-
-        btnBeforeOrder.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                //phí ship
-                if (rdGiaoNhanh.isChecked() == true) {
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                // TODO Auto-generated method stub
+
+                if(isChecked)
+                {
                     txtShip.setText(String.valueOf(shipGiaoNhanh));
                     flag = 0;
-                }
-                else
-                if (rdGiaoHomSau.isChecked() == true){
-                    txtShip.setText(String.valueOf(shipHomSau));
-                    flag = 0;
-                }
-                else
-                if (rdGiaoTC.isChecked() == true){
-                    txtShip.setText(String.valueOf(shipGiaoTC));
-                    flag = 0;
-                } else{
-                    flag = 1;
+                    Toast toast = Toast.makeText(getApplicationContext(), "Tiền ship của bạn là: " + shipGiaoNhanh + " đ", Toast.LENGTH_LONG);
+
+                    toast.show();
                 }
 
-                if (flag == 1) {
+
+            }
+
+        });
+
+        rdGiaoTC.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                // TODO Auto-generated method stub
+
+                if(isChecked)
+                {
+                    txtShip.setText(String.valueOf(shipGiaoTC));
+                    flag = 0;
+                    Toast toast = Toast.makeText(getApplicationContext(), "Tiền ship của bạn là: " + shipGiaoTC + " đ", Toast.LENGTH_LONG);
+
+                    toast.show();
+                }
+
+
+            }
+
+        });
+
+
+
+        rdGiaoHomSau.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                // TODO Auto-generated method stub
+
+                if(isChecked)
+                {
+                    txtShip.setText(String.valueOf(shipHomSau));
+                    flag = 0;
+                    Toast toast = Toast.makeText(getApplicationContext(), "Tiền ship của bạn là: " + shipHomSau + " đ", Toast.LENGTH_LONG);
+
+                    toast.show();
+                }
+
+            }
+
+        });
+
+        btnBeforeOrder.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (rdGiaoHomSau.isChecked() == false && rdGiaoNhanh.isChecked() == false && rdGiaoTC.isChecked() == false)
+                {
                     Toast toast = Toast.makeText(getApplicationContext(), "Bạn cần chọn hình thức giao hàng!", Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER, 0, 0);
+
                     toast.show();
                 } else {
                     Intent ordered = new Intent(getApplication(), OrderInfoActivity.class);

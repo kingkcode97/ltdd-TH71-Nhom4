@@ -99,7 +99,6 @@ public class CartFragment extends Fragment {
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Giỏ hàng trống!", Toast.LENGTH_LONG).show();
 
                 Intent ordered = new Intent(getActivity(), BeforeOrderActivity.class);
                 startActivity(ordered);
