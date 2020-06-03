@@ -1,19 +1,21 @@
-package com.FourFashionShop.adapter;
+package com.FourFashionShop.ui.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.CartModel;
+import com.FourFashionShop.model.CartModel;
 
 import java.util.List;
 
@@ -27,10 +29,10 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
 
     //interface
     public interface OnItemCartClickListener {
-       void onItemClick(int position);
-       void onDeleteClick(int position);
-       void onAddNumberClick(int position);
-       void onRemoveNumberClick(int position);
+        void onItemClick(int position);
+        void onDeleteClick(int position);
+        void onAddNumberClick(int position);
+        void onRemoveNumberClick(int position);
     }
 
     public void setOnIteamClickListener(OnItemCartClickListener listener) {

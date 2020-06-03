@@ -1,5 +1,8 @@
 package com.FourFashionShop.fragment;
 
+import android.app.Dialog;
+import android.app.Notification;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
@@ -8,17 +11,25 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.telecom.TelecomManager;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.CartModel;
-import com.FourFashionShop.adapter.CartAdapter;
+import com.FourFashionShop.ui.BeforeOrderActivity;
+import com.FourFashionShop.model.CartModel;
+import com.FourFashionShop.ui.MainActivity;
+import com.FourFashionShop.ui.OrderInfoActivity;
+import com.FourFashionShop.ui.UserInfoActivity;
+import com.FourFashionShop.adapter.AccountAdapter;
+import com.FourFashionShop.ui.Adapter.CartAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,11 +39,16 @@ public class CartFragment extends Fragment {
 
     private View view;
     private RecyclerView recyclerView;
-    private List<CartModel> cartModels;
+    public static List<CartModel> cartModels;
     private CartAdapter cartAdapter;
     private ImageButton imgBtnCloseCart, imgBtnAddPro, imgBtnRemovePro;
-    public ActionBar actionBar;
+    private ActionBar actionBar;
     public TextView txtName, txtTotalPrice, txtSoLuong;
+    public Button btnOrder;
+
+    //dialog
+    private Dialog dialog;
+
     public CartFragment() {
         // Required empty public constructor
     }
@@ -78,6 +94,17 @@ public class CartFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recycler_product);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(cartAdapter);
+
+        btnOrder = (Button) view.findViewById(R.id.btnOrder);
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent ordered = new Intent(getActivity(), BeforeOrderActivity.class);
+                startActivity(ordered);
+            }
+        });
+
         buildRecyclerView();
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -87,6 +114,9 @@ public class CartFragment extends Fragment {
     public void removeItem(int position) {
         cartModels.remove(position);
         cartAdapter.notifyItemRemoved(position);
+        Toast toast = Toast.makeText(getContext(), "Bạn vừa xóa một sản phẩm!", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
     }
 
     //bo
@@ -98,7 +128,7 @@ public class CartFragment extends Fragment {
     public void addNumber(int position) {
         int num = Integer.valueOf(cartModels.get(position).getTxtSoLuong());
         num++;
-        cartModels.get(position).setTxtSoLuong(String.valueOf(5));
+        cartModels.get(position).setTxtSoLuong(String.valueOf(num));
         cartAdapter.notifyItemChanged(position);
     }
 
@@ -128,8 +158,12 @@ public class CartFragment extends Fragment {
 
             @Override
             public void onDeleteClick(int position) {
+
                 removeItem(position);
                 NoficationCart();
+
+
+
             }
 
             @Override
@@ -159,4 +193,7 @@ public class CartFragment extends Fragment {
             actionBar.setTitle("Giỏ hàng(" + cartModels.size() + ")");
         }
     }
+
+    //dialog
+
 }

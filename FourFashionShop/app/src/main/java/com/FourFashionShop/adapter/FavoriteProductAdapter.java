@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.FourFashionShop.ProductModel;
+import com.FourFashionShop.model.ProductModel;
 import com.FourFashionShop.R;
 
 import java.util.List;

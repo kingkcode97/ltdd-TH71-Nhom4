@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.FourFashionShop.OrderModel;
+import com.FourFashionShop.model.OrderModel;
 import com.FourFashionShop.R;
 
 import java.util.List;

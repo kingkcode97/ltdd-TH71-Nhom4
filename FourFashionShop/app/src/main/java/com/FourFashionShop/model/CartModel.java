@@ -1,4 +1,4 @@
-package com.FourFashionShop;
+package com.FourFashionShop.model;
 
 public class CartModel {
     private String name, totalPrice, txtSoLuong;
