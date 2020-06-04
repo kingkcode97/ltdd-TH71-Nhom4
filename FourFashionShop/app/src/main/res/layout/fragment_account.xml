@@ -8,10 +8,10 @@
     android:orientation="vertical"
     android:id="@+id/fragment_account_layout"
     android:background="@color/grey_400"
-    tools:context=".fragment.AccountFragment">
+    tools:context=".Fragments.AccountFragment">
 
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: Update blank Fragments layout -->
     <LinearLayout
         android:background="@color/white"
         android:id="@+id/linearLayout"

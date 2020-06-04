@@ -2,9 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mall_Item_Fragment.MallItem1">
+    tools:context=".Fragments.mall_Item_Fragment.MallItem1">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: Update blank Fragments layout -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_item1"
         android:layout_width="match_parent"

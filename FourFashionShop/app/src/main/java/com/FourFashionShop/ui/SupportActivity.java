@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.adapter.SupportAdapter;
+import com.FourFashionShop.Adapters.SupportAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

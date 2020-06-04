@@ -10,9 +10,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.FourFashionShop.model.ProductModel;
+import com.FourFashionShop.Models.ProductModel;
 import com.FourFashionShop.R;
-import com.FourFashionShop.adapter.FavoriteProductAdapter;
+import com.FourFashionShop.Adapters.FavoriteProductAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

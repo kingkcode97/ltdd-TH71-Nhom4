@@ -40,14 +40,10 @@
             android:name=".ui.SupportActivity"
             android:theme="@style/Theme.AppCompat.DayNight" />
         <activity
-            android:name=".ui.UserInfoActivity"
-            android:theme="@style/AppTheme.FullScreen" />
-        <activity
             android:name=".ui.MainActivity"
             android:theme="@style/BottomNavigation" />
         <activity android:name=".ui.LoginActivity" />
         <activity android:name=".ui.RegisterActivity" />
-        <activity android:name=".ui.WelcomeActivity" />
         <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

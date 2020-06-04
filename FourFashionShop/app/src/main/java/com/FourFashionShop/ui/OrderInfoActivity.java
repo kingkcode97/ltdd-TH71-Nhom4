@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.fragment.MallFragment;
 
 public class OrderInfoActivity extends AppCompatActivity {
     private TextView txtInfoAccount;

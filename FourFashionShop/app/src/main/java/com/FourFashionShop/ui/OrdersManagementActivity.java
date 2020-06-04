@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.FourFashionShop.model.OrderModel;
+import com.FourFashionShop.Models.OrderModel;
 import com.FourFashionShop.R;
-import com.FourFashionShop.adapter.OrdersManagementAdapter;
+import com.FourFashionShop.Adapters.OrdersManagementAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

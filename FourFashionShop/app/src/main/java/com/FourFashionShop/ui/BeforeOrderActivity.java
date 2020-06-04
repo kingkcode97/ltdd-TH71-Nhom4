@@ -5,17 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -24,8 +19,7 @@ import android.widget.Toast;
 
 import com.FourFashionShop.R;
 import com.FourFashionShop.ui.Adapter.BeforeOrderAdapter;
-import com.FourFashionShop.ui.Adapter.CartAdapter;
-import com.FourFashionShop.fragment.CartFragment;
+import com.FourFashionShop.Fragments.CartFragment;
 
 public class BeforeOrderActivity extends AppCompatActivity {
     private TextView txtContent;

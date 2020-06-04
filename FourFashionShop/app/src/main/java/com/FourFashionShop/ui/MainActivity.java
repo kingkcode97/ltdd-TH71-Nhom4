@@ -5,13 +5,12 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.fragment.AccountFragment;
-import com.FourFashionShop.fragment.CartFragment;
-import com.FourFashionShop.fragment.HomeFragment;
-import com.FourFashionShop.fragment.MallFragment;
+import com.FourFashionShop.Fragments.AccountFragment;
+import com.FourFashionShop.Fragments.CartFragment;
+import com.FourFashionShop.Fragments.HomeFragment;
+import com.FourFashionShop.Fragments.MallFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
