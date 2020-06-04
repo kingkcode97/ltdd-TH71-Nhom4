@@ -3,7 +3,11 @@
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="40dp"
+<<<<<<< HEAD
     android:layout_marginTop="1dp"
+=======
+    android:layout_marginBottom="1dp"
+>>>>>>> phuoc
     android:orientation="horizontal">
 
     <ImageView

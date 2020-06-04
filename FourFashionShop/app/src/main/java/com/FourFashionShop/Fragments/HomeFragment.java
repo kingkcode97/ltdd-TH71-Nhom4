@@ -13,11 +13,19 @@ import com.FourFashionShop.R;
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
+<<<<<<< HEAD
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+=======
+ * create an instance of this Fragments.
+ */
+public class HomeFragment extends Fragment {
+    // TODO: Rename parameter arguments, choose names that match
+    // the Fragments initialization parameters, e.g. ARG_ITEM_NUMBER
+>>>>>>> phuoc
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -31,11 +39,19 @@ public class HomeFragment extends Fragment {
 
     /**
      * Use this factory method to create a new instance of
+<<<<<<< HEAD
      * this fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
      * @return A new instance of fragment HomeFragment.
+=======
+     * this Fragments using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of Fragments HomeFragment.
+>>>>>>> phuoc
      */
     // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance(String param1, String param2) {
@@ -59,7 +75,11 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+<<<<<<< HEAD
         // Inflate the layout for this fragment
+=======
+        // Inflate the layout for this Fragments
+>>>>>>> phuoc
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }

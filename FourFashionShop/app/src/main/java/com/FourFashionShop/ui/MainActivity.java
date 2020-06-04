@@ -1,10 +1,18 @@
 package com.FourFashionShop.ui;
 
+<<<<<<< HEAD
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+=======
+import android.os.Bundle;
+import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+>>>>>>> phuoc
 
 import com.FourFashionShop.R;
 import com.FourFashionShop.Fragments.AccountFragment;
@@ -24,6 +32,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> phuoc
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         //frameLayout = findViewById(R.id.container);
 

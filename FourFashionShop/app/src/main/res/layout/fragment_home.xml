@@ -4,9 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green_100"
+<<<<<<< HEAD
     tools:context=".ui.Fragment.HomeFragment">
+=======
+    tools:context=".Fragments.HomeFragment">
+>>>>>>> phuoc
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: Update blank Fragments layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

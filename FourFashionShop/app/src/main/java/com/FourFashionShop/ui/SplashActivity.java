@@ -46,4 +46,6 @@ public class SplashActivity extends AppCompatActivity{
         Toast.makeText(SplashActivity.this,
                 "Welcome to 4 Fashion Shop", Toast.LENGTH_SHORT).show();
     }
+
+
 }

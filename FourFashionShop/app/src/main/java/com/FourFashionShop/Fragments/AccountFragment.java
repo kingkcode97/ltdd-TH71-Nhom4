@@ -13,12 +13,24 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
 import android.widget.Toast;
 
 import com.FourFashionShop.Adapters.AccountAdapter;
 import com.FourFashionShop.R;
 import com.FourFashionShop.Models.AccountModel;
 import com.FourFashionShop.ui.UserInfoActivity;
+=======
+
+import com.FourFashionShop.R;
+import com.FourFashionShop.Models.AccountModel;
+import com.FourFashionShop.ui.FavoriteProductActivity;
+import com.FourFashionShop.ui.OrdersManagementActivity;
+import com.FourFashionShop.ui.ProductsPurchasedActivity;
+import com.FourFashionShop.ui.SupportActivity;
+import com.FourFashionShop.ui.UserInfoActivity;
+import com.FourFashionShop.Adapters.AccountAdapter;
+>>>>>>> phuoc
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,10 +75,16 @@ public class AccountFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         recyclerView.addOnItemTouchListener(
+<<<<<<< HEAD
                 new com.FourFashionShop.Fragments.RecyclerItemClickListener(getContext(), recyclerView ,new com.FourFashionShop.Fragments.RecyclerItemClickListener.OnItemClickListener() {
                     @Override public void onItemClick(View view, int position) {
                         // do whatever
                         Toast.makeText(getContext(), "Recycle Click" + position, Toast.LENGTH_SHORT).show();
+=======
+                new RecyclerItemClickListener(getContext(), recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override public void onItemClick(View view, int position) {
+                        //Toast.makeText(getContext(), "Recycle Click" + position, Toast.LENGTH_SHORT).show();
+>>>>>>> phuoc
                         switch (position)
                         {
                             case 0:
@@ -74,6 +92,7 @@ public class AccountFragment extends Fragment {
                                 startActivity(intent);
                                 break;
                             case 1:
+<<<<<<< HEAD
 
                                 break;
                             case 2:
@@ -95,6 +114,29 @@ public class AccountFragment extends Fragment {
                         }
                     }
 
+=======
+                                Intent intent1 = new Intent(getActivity(), OrdersManagementActivity.class);
+                                startActivity(intent1);
+                                break;
+                            case 2:
+                                Intent intent2 = new Intent(getActivity(), ProductsPurchasedActivity.class);
+                                startActivity(intent2);
+                                break;
+                            case 3:
+                                Intent intent3 = new Intent(getActivity(), FavoriteProductActivity.class);
+                                startActivity(intent3);
+                                break;
+                            case 4:
+//                                Intent intent4 = new Intent(getActivity(), UserInfoActivity.class);
+//                                startActivity(intent4);
+                                break;
+                            case 5:
+                                Intent intent5 = new Intent(getActivity(), SupportActivity.class);
+                                startActivity(intent5);
+                                break;
+                        }
+                    }
+>>>>>>> phuoc
                     @Override public void onLongItemClick(View view, int position) {
                         // do whatever
                     }

@@ -10,8 +10,11 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ScrollView;
+<<<<<<< HEAD
 import android.widget.TextView;
 import android.widget.Toast;
+=======
+>>>>>>> phuoc
 
 import com.FourFashionShop.R;
 

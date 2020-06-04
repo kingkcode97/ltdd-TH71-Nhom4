@@ -1,5 +1,10 @@
 package com.FourFashionShop.Fragments;
 
+<<<<<<< HEAD
+=======
+import android.app.Dialog;
+import android.content.Intent;
+>>>>>>> phuoc
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
@@ -12,13 +17,23 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
+=======
+import android.widget.Button;
+>>>>>>> phuoc
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.FourFashionShop.R;
+<<<<<<< HEAD
 import com.FourFashionShop.Models.CartModel;
 import com.FourFashionShop.Adapters.CartAdapter;
+=======
+import com.FourFashionShop.ui.BeforeOrderActivity;
+import com.FourFashionShop.Models.CartModel;
+import com.FourFashionShop.ui.Adapter.CartAdapter;
+>>>>>>> phuoc
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,11 +43,24 @@ public class CartFragment extends Fragment {
 
     private View view;
     private RecyclerView recyclerView;
+<<<<<<< HEAD
     private List<CartModel> cartModels;
     private CartAdapter cartAdapter;
     private ImageButton imgBtnCloseCart, imgBtnAddPro, imgBtnRemovePro;
     public ActionBar actionBar;
     public TextView txtName, txtTotalPrice, txtSoLuong;
+=======
+    public static List<CartModel> cartModels;
+    private CartAdapter cartAdapter;
+    private ImageButton imgBtnCloseCart, imgBtnAddPro, imgBtnRemovePro;
+    private ActionBar actionBar;
+    public TextView txtName, txtTotalPrice, txtSoLuong;
+    public Button btnOrder;
+
+    //dialog
+    private Dialog dialog;
+
+>>>>>>> phuoc
     public CartFragment() {
         // Required empty public constructor
     }
@@ -61,7 +89,11 @@ public class CartFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+<<<<<<< HEAD
         // Inflate the layout for this fragment
+=======
+        // Inflate the layout for this Fragments
+>>>>>>> phuoc
         //return inflater.inflate(R.layout.fragment_cart, container, false);
 
 
@@ -78,6 +110,20 @@ public class CartFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recycler_product);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(cartAdapter);
+<<<<<<< HEAD
+=======
+
+        btnOrder = (Button) view.findViewById(R.id.btnOrder);
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent ordered = new Intent(getActivity(), BeforeOrderActivity.class);
+                startActivity(ordered);
+            }
+        });
+
+>>>>>>> phuoc
         buildRecyclerView();
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -87,6 +133,12 @@ public class CartFragment extends Fragment {
     public void removeItem(int position) {
         cartModels.remove(position);
         cartAdapter.notifyItemRemoved(position);
+<<<<<<< HEAD
+=======
+        Toast toast = Toast.makeText(getContext(), "Bạn vừa xóa một sản phẩm!", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+>>>>>>> phuoc
     }
 
     //bo
@@ -98,7 +150,11 @@ public class CartFragment extends Fragment {
     public void addNumber(int position) {
         int num = Integer.valueOf(cartModels.get(position).getTxtSoLuong());
         num++;
+<<<<<<< HEAD
         cartModels.get(position).setTxtSoLuong(String.valueOf(5));
+=======
+        cartModels.get(position).setTxtSoLuong(String.valueOf(num));
+>>>>>>> phuoc
         cartAdapter.notifyItemChanged(position);
     }
 
@@ -128,8 +184,17 @@ public class CartFragment extends Fragment {
 
             @Override
             public void onDeleteClick(int position) {
+<<<<<<< HEAD
                 removeItem(position);
                 NoficationCart();
+=======
+
+                removeItem(position);
+                NoficationCart();
+
+
+
+>>>>>>> phuoc
             }
 
             @Override
@@ -159,4 +224,10 @@ public class CartFragment extends Fragment {
             actionBar.setTitle("Giỏ hàng(" + cartModels.size() + ")");
         }
     }
+<<<<<<< HEAD
+=======
+
+    //dialog
+
+>>>>>>> phuoc
 }

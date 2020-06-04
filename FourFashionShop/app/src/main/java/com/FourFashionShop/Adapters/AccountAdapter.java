@@ -19,8 +19,13 @@ import java.util.List;
 
 public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.MyViewHolder> {
 
+<<<<<<< HEAD
     List<AccountModel> accountModels;
     Context context;
+=======
+    private List<AccountModel> accountModels;
+    private Context context;
+>>>>>>> phuoc
 
     public AccountAdapter(List<AccountModel> accountModels, Context context) {
         this.accountModels = accountModels;
@@ -65,6 +70,10 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.MyViewHo
             itemView.setOnTouchListener(itemTouchListener);
         }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> phuoc
     private View.OnTouchListener itemTouchListener = new View.OnTouchListener() {
 
         @Override

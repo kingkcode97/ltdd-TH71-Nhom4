@@ -4,14 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@color/orange_200"
     tools:context=".ui.Fragment.MallFragment">
 
     <!-- TODO: Update blank fragment layout -->
+=======
+    tools:context=".Fragments.MallFragment">
+
+    <!-- TODO: Update blank Fragments layout -->
+
+>>>>>>> phuoc
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+<<<<<<< HEAD
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
@@ -27,4 +35,22 @@
     </LinearLayout>
 
 
+=======
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="scrollable" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_margin="15dp"
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+>>>>>>> phuoc
 </RelativeLayout>

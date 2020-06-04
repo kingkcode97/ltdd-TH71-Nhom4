@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.FourFashionShop.Adapters;
+=======
+package com.FourFashionShop.ui.Adapter;
+>>>>>>> phuoc
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -27,10 +31,17 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
 
     //interface
     public interface OnItemCartClickListener {
+<<<<<<< HEAD
        void onItemClick(int position);
        void onDeleteClick(int position);
        void onAddNumberClick(int position);
        void onRemoveNumberClick(int position);
+=======
+        void onItemClick(int position);
+        void onDeleteClick(int position);
+        void onAddNumberClick(int position);
+        void onRemoveNumberClick(int position);
+>>>>>>> phuoc
     }
 
     public void setOnIteamClickListener(OnItemCartClickListener listener) {

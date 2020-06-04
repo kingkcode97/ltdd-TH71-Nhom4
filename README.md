@@ -1,6 +1,6 @@
 # ltdd-TH71-Nhom4
 
-### Đề tài: Ứng dụng shop mua bán quần áo
+### Đề tài: Ứng dụng shop thời trang online
 ### Mô tả: (update)
  
 ### Ứng dụng được xây dựng trên nền tảng Android và sử dụng các thư viện Android sau:
@@ -25,7 +25,7 @@
                   
 #### Tạo **Backend APIs** với:
 ```
-  Retrofit
+  Retrofit2
   Django Rest Framework
   Postgres
 ```
