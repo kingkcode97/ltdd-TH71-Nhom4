@@ -19,7 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.FourFashionShop.R;
-import com.FourFashionShop.Fragments.mall_Item_Fragment.Item;
+import com.FourFashionShop.Fragments.Mall_Item_Fragment.Item;
 
 import java.util.List;
 

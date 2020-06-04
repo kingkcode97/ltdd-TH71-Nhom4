@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "308656299454",
+    "firebase_url": "https://fourfashionshop-b1a4c.firebaseio.com",
+    "project_id": "fourfashionshop-b1a4c",
+    "storage_bucket": "fourfashionshop-b1a4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308656299454:android:c501de9b011da4a87f2def",
+        "android_client_info": {
+          "package_name": "com.FourFashionShop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308656299454-asp2i908tcvmoaqtkb976dggsfu8s126.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-B6KcokwX27dXFHmTxr5_5sOZ8PvyAMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308656299454-asp2i908tcvmoaqtkb976dggsfu8s126.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

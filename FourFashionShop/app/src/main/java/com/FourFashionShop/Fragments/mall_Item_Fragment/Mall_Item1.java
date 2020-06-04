@@ -1,4 +1,4 @@
-package com.FourFashionShop.Fragments.mall_Item_Fragment;
+package com.FourFashionShop.Fragments.Mall_Item_Fragment;
 
 import android.os.Bundle;
 
@@ -18,13 +18,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MallItem1 extends Fragment {
+public class Mall_Item1 extends Fragment {
     private View view;
     private RecyclerView recyclerView;
     private List<Item> items;
 
 
-    public MallItem1() {
+    public Mall_Item1() {
 
     }
 
@@ -54,7 +54,5 @@ public class MallItem1 extends Fragment {
         items.add(new Item("ádas", "232131", "93", R.drawable.item2));
         items.add(new Item("sadas", "232131", "30", R.drawable.item2));
         items.add(new Item("2131áaa2", "232131", "32", R.drawable.item2));
-
     }
-
 }

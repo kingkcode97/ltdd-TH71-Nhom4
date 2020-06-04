@@ -2,19 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    tools:context=".ui.Mall_Item_Fragment.Mall_Item2">
+    tools:context=".Fragments.Mall_Item_Fragment.Mall_Item2">
     android:paddingTop="20dp"
     android:paddingLeft="20dp">
 
-    <!-- TODO: Update blank fragment layout -->
-=======
-    tools:context=".Fragments.mall_Item_Fragment.Mall_Item2">
-    android:paddingTop="20dp"
-    android:paddingLeft="20dp">
-
-    <!-- TODO: Update blank Fragments layout -->
->>>>>>> phuoc
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_item2"
         android:layout_width="match_parent"

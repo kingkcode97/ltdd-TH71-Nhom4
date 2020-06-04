@@ -3,21 +3,14 @@
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="40dp"
-<<<<<<< HEAD
     android:layout_marginTop="1dp"
-=======
     android:layout_marginBottom="1dp"
->>>>>>> phuoc
     android:orientation="horizontal">
 
     <TextView
         android:layout_marginStart="10dp"
         android:layout_gravity="center"
-<<<<<<< HEAD
-        android:id="@+id/textView_content"
-=======
         android:id="@+id/textView_support_content"
->>>>>>> phuoc
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="mlemmmm x2" />

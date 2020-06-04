@@ -8,16 +8,8 @@
     android:orientation="vertical"
     android:id="@+id/fragment_account_layout"
     android:background="@color/grey_400"
-<<<<<<< HEAD
-    tools:context=".ui.Fragment.AccountFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-=======
     tools:context=".Fragments.AccountFragment">
 
-
-    <!-- TODO: Update blank Fragments layout -->
->>>>>>> phuoc
     <LinearLayout
         android:background="@color/white"
         android:id="@+id/linearLayout"
@@ -31,7 +23,7 @@
             android:layout_gravity="center"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/ic_launcher_foreground" />
+            android:src="@drawable/item1" />
 
         <TextView
             android:textStyle="bold"
@@ -43,17 +35,6 @@
             android:text="Meo meo meo" />
     </LinearLayout>
 
-<<<<<<< HEAD
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewAccount"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-=======
     <Space
         android:layout_width="match_parent"
         android:layout_height="5dp" />
@@ -79,6 +60,4 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
->>>>>>> phuoc
-
 </LinearLayout>
