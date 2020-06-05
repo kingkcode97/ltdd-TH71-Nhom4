@@ -2,7 +2,6 @@ package com.FourFashionShop.ui;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,12 +17,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.FourFashionShop.R;
-import com.FourFashionShop.ui.Adapter.BeforeOrderAdapter;
 import com.FourFashionShop.Fragments.CartFragment;
+import com.FourFashionShop.R;
+import com.FourFashionShop.Adapters.BeforeOrderAdapter;
 
 public class BeforeOrderActivity extends AppCompatActivity {
-    private TextView txtContent;
+    private TextView txtContent, txtPriceTamTinh, txtTongTien;
     private RecyclerView recycler_product_order;
     private BeforeOrderAdapter beforeOrderAdapter;
     private Button btnBeforeOrder;
@@ -35,17 +34,18 @@ public class BeforeOrderActivity extends AppCompatActivity {
     int shipHomSau = 30000;
     int shipGiaoTC = 20000;
     private int flag = 1;
+    int tien = CartFragment.tongTien;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_before_order);
 
-        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
-
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("Hình Thức Giao Hàng");
+
 
         txtContent = (TextView) findViewById(R.id.txtContent);
         txtContent.setText("Địa chỉ nhận hàng\nChọn địa chỉ");
@@ -55,6 +55,8 @@ public class BeforeOrderActivity extends AppCompatActivity {
         recycler_product_order = findViewById(R.id.recycler_product_order);
         btnBeforeOrder = findViewById(R.id.btnBeforeOrder);
         lnLocation = findViewById(R.id.lnLocation);
+        txtPriceTamTinh = findViewById(R.id.txtPriceTamTinh);
+        txtTongTien = findViewById(R.id.txtTongTien);
 
         rdGiaoNhanh = findViewById(R.id.rdGiaoNhanh);
         rdGiaoHomSau = findViewById(R.id.rdGiaoHomSau);
@@ -62,8 +64,10 @@ public class BeforeOrderActivity extends AppCompatActivity {
         txtShip = findViewById(R.id.txtShip);
         recycler_product_order.setAdapter(beforeOrderAdapter);
         recycler_product_order.setLayoutManager(new LinearLayoutManager(this));
+        txtShip.setText("0");
 
-
+        txtTongTien.setText(String.valueOf(CartFragment.tongTien));
+        txtPriceTamTinh.setText(String.valueOf(CartFragment.tongTien));
         //Địa điểm
         lnLocation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +86,10 @@ public class BeforeOrderActivity extends AppCompatActivity {
 
                 if(isChecked)
                 {
+                    tien = CartFragment.tongTien;
                     txtShip.setText(String.valueOf(shipGiaoNhanh));
+                    tien +=  Integer.parseInt(txtShip.getText().toString());
+                    txtTongTien.setText(String.valueOf(tien));
                     flag = 0;
                     Toast toast = Toast.makeText(getApplicationContext(), "Tiền ship của bạn là: " + shipGiaoNhanh + " đ", Toast.LENGTH_LONG);
 
@@ -103,7 +110,10 @@ public class BeforeOrderActivity extends AppCompatActivity {
 
                 if(isChecked)
                 {
+                    tien = CartFragment.tongTien;
                     txtShip.setText(String.valueOf(shipGiaoTC));
+                    tien +=  Integer.parseInt(txtShip.getText().toString());
+                    txtTongTien.setText(String.valueOf(tien));
                     flag = 0;
                     Toast toast = Toast.makeText(getApplicationContext(), "Tiền ship của bạn là: " + shipGiaoTC + " đ", Toast.LENGTH_LONG);
 
@@ -126,7 +136,10 @@ public class BeforeOrderActivity extends AppCompatActivity {
 
                 if(isChecked)
                 {
+                    tien = CartFragment.tongTien;
                     txtShip.setText(String.valueOf(shipHomSau));
+                    tien +=  Integer.parseInt(txtShip.getText().toString());
+                    txtTongTien.setText(String.valueOf(tien));
                     flag = 0;
                     Toast toast = Toast.makeText(getApplicationContext(), "Tiền ship của bạn là: " + shipHomSau + " đ", Toast.LENGTH_LONG);
 
@@ -136,6 +149,7 @@ public class BeforeOrderActivity extends AppCompatActivity {
             }
 
         });
+
 
         btnBeforeOrder.setOnClickListener(new View.OnClickListener() {
 
@@ -153,6 +167,8 @@ public class BeforeOrderActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 
     @Override
@@ -163,5 +179,8 @@ public class BeforeOrderActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    //Tổng tiền
+
 
 }

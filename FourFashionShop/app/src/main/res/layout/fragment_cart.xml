@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_200"
-    tools:context=".Fragments.CartFragment">
+    tools:context=".ui.Fragment.CartFragment">
 
     <!-- TODO: Update blank Fragments layout -->
 
@@ -48,7 +48,7 @@
                 />
 
             <TextView
-                android:id="@+id/txtTotalPrice"
+                android:id="@+id/txtTongTien"
                 android:layout_toRightOf="@id/txtThanhTien"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -70,6 +70,7 @@
                 android:text="@string/Button_MuaHang"
                 android:textAllCaps="false"
                 android:layout_alignParentRight="true"
+
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
 
@@ -78,4 +79,8 @@
 
 
     </androidx.cardview.widget.CardView>
+
+
+
+
 </RelativeLayout>

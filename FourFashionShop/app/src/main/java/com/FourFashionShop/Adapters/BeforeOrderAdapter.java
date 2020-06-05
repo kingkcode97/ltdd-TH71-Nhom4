@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui.Adapter;
+package com.FourFashionShop.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -46,9 +46,9 @@ public class BeforeOrderAdapter extends RecyclerView.Adapter<BeforeOrderAdapter.
     @Override
     public void onBindViewHolder(@NonNull final BeforeOrderAdapter.MyViewHolder holder, int position) {
         holder.txtNameProductOrder.setText(cartModelList.get(position).getName());
-        holder.txtPricaOrder.setText(cartModelList.get(position).getTotalPrice());
+        holder.txtPricaOrder.setText(String.valueOf(cartModelList.get(position).getTotalPrice()));
         holder.imageProOrder.setImageResource(cartModelList.get(position).getImg());
-        holder.txtNumPro.setText(cartModelList.get(position).getTxtSoLuong());
+        holder.txtNumPro.setText(String.valueOf(cartModelList.get(position).getTxtSoLuong()));
 
 
 

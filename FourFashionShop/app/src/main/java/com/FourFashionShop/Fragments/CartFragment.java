@@ -20,16 +20,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.FourFashionShop.R;
+import com.FourFashionShop.ui.BeforeOrderActivity;
 import com.FourFashionShop.Models.CartModel;
 import com.FourFashionShop.Adapters.CartAdapter;
-import com.FourFashionShop.ui.BeforeOrderActivity;
+import com.FourFashionShop.Models.CartModel;
+import com.FourFashionShop.Adapters.CartAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class CartFragment extends Fragment {
-
+    public static int tongTien = 0;
     private View view;
     private RecyclerView recyclerView;
     public static List<CartModel> cartModels;
@@ -41,6 +43,7 @@ public class CartFragment extends Fragment {
 
     //dialog
     private Dialog dialog;
+
     public CartFragment() {
         // Required empty public constructor
     }
@@ -55,14 +58,16 @@ public class CartFragment extends Fragment {
         actionBar.setDisplayShowHomeEnabled(true);
 
         cartModels = new ArrayList<>();
-        cartModels.add(new CartModel("Quần đùi", "200,000đ", R.drawable.tra, "2"));
-        cartModels.add(new CartModel("Quần thun", "200,000đ", R.drawable.tra, "3"));
-        cartModels.add(new CartModel("Quần tay", "200,000đ", R.drawable.tra, "4"));
-        cartModels.add(new CartModel("Áo khoác", "200,000đ", R.drawable.tra, "5"));
-        cartModels.add(new CartModel("Áo jean", "200,000đ", R.drawable.tra, "2"));
-        cartModels.add(new CartModel("Áo sơ mi", "200,000đ", R.drawable.tra, "2"));
+        cartModels.add(new CartModel("Quần đùi", 200000, R.drawable.tra, 2));
+        cartModels.add(new CartModel("Quần thun", 200000, R.drawable.tra, 3));
+        cartModels.add(new CartModel("Quần tay", 200000, R.drawable.tra, 2));
+        cartModels.add(new CartModel("Áo khoác", 200000, R.drawable.tra, 3));
+        cartModels.add(new CartModel("Áo jean", 200000, R.drawable.tra, 4));
+        cartModels.add(new CartModel("Áo sơ mi", 200000, R.drawable.tra, 1));
+
 
         actionBar.setTitle("Giỏ hàng(" + cartModels.size() + ")");
+
 
     }
 
@@ -80,7 +85,7 @@ public class CartFragment extends Fragment {
         imgBtnCloseCart = (ImageButton) view.findViewById(R.id.imgBtnCloseCart);
         txtSoLuong = (TextView) view.findViewById(R.id.txtSoLuong);
         txtName = (TextView) view.findViewById(R.id.txtName);
-        txtTotalPrice = (TextView) view.findViewById(R.id.txtTotalPrice);
+        txtTotalPrice = (TextView) view.findViewById(R.id.txtTongTien);
 
         cartAdapter = new CartAdapter(cartModels, getContext());
         recyclerView = view.findViewById(R.id.recycler_product);
@@ -99,7 +104,7 @@ public class CartFragment extends Fragment {
 
         buildRecyclerView();
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
+        TongTien();
         return view;
     }
 
@@ -109,19 +114,17 @@ public class CartFragment extends Fragment {
         Toast toast = Toast.makeText(getContext(), "Bạn vừa xóa một sản phẩm!", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
+        TongTien();
     }
 
-    //bo
-    public void changeItem(int position, String num) {
-        cartModels.get(position).setTxtSoLuong(num);
-        cartAdapter.notifyItemChanged(position);
-    }
+
 
     public void addNumber(int position) {
         int num = Integer.valueOf(cartModels.get(position).getTxtSoLuong());
         num++;
-        cartModels.get(position).setTxtSoLuong(String.valueOf(num));
+        cartModels.get(position).setTxtSoLuong(num);
         cartAdapter.notifyItemChanged(position);
+        TongTien();
     }
 
     public void removeNumber(int position) {
@@ -132,10 +135,11 @@ public class CartFragment extends Fragment {
             cartAdapter.notifyItemRemoved(position);
         }
         else{
-            cartModels.get(position).setTxtSoLuong(String.valueOf(num));
+            cartModels.get(position).setTxtSoLuong(num);
             cartAdapter.notifyItemChanged(position);
         }
 
+        TongTien();
     }
 
     public void buildRecyclerView() {
@@ -150,8 +154,11 @@ public class CartFragment extends Fragment {
 
             @Override
             public void onDeleteClick(int position) {
+
                 removeItem(position);
                 NoficationCart();
+
+
 
             }
 
@@ -182,4 +189,14 @@ public class CartFragment extends Fragment {
             actionBar.setTitle("Giỏ hàng(" + cartModels.size() + ")");
         }
     }
+
+    //Tổng tiền
+    public void TongTien() {
+        tongTien = 0;
+        for (int k = 0; k < cartModels.size(); k++) {
+            tongTien += cartModels.get(k).getTxtSoLuong() * cartModels.get(k).getTotalPrice();
+        }
+        txtTotalPrice.setText(String.valueOf(tongTien) + " đ");
+    }
+
 }

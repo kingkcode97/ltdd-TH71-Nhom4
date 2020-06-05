@@ -27,10 +27,10 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
 
     //interface
     public interface OnItemCartClickListener {
-       void onItemClick(int position);
-       void onDeleteClick(int position);
-       void onAddNumberClick(int position);
-       void onRemoveNumberClick(int position);
+        void onItemClick(int position);
+        void onDeleteClick(int position);
+        void onAddNumberClick(int position);
+        void onRemoveNumberClick(int position);
     }
 
     public void setOnIteamClickListener(OnItemCartClickListener listener) {
@@ -53,11 +53,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull final CartAdapter.MyViewHolder holder, int position) {
         holder.txtName.setText(cartModelList.get(position).getName());
-        holder.txtTotalPrice.setText(cartModelList.get(position).getTotalPrice());
+        holder.txtPrice.setText(cartModelList.get(position).getTotalPrice() + " đ");
         holder.imageView.setImageResource(cartModelList.get(position).getImg());
-        holder.txtSoLuong.setText(cartModelList.get(position).getTxtSoLuong());
+        holder.txtSoLuong.setText(String.valueOf(cartModelList.get(position).getTxtSoLuong()));
 
-        sluong = Integer.parseInt(cartModelList.get(position).getTxtSoLuong());
+
 
 
 
@@ -70,7 +70,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView imageView;
-        public TextView txtName, txtTotalPrice, txtSoLuong;
+        public TextView txtName, txtPrice, txtSoLuong;
         public ImageButton imgBtnCloseCart, imgBtnAddPro, imgBtnRemovePro;
         public CardView cardView;
 
@@ -80,7 +80,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
             cardView = itemView.findViewById(R.id.card_container);
             txtSoLuong = (TextView) itemView.findViewById(R.id.txtSoLuong);
             txtName = (TextView) itemView.findViewById(R.id.txtName);
-            txtTotalPrice = (TextView) itemView.findViewById(R.id.txtTotalPrice);
+            txtPrice = (TextView) itemView.findViewById(R.id.txtPrice);
             imageView = (ImageView) itemView.findViewById(R.id.imagePro);
 
             imgBtnAddPro = (ImageButton) itemView.findViewById(R.id.imgBtnAddPro);

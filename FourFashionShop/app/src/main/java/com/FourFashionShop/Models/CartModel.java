@@ -1,11 +1,12 @@
 package com.FourFashionShop.Models;
 
 public class CartModel {
-    private String name, totalPrice, txtSoLuong;
+    private String name;
+    int totalPrice, txtSoLuong;
     private int img;
 
 
-    public CartModel(String name, String totalPricae, int img, String txtSoLuong) {
+    public CartModel(String name, int totalPricae, int img, int txtSoLuong) {
         this.name = name;
         this.totalPrice = totalPricae;
         this.img = img;
@@ -20,11 +21,11 @@ public class CartModel {
         this.name = name;
     }
 
-    public String getTotalPrice() {
+    public int getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(String totalPrice) {
+    public void setTotalPrice(int totalPrice) {
         this.totalPrice = totalPrice;
     }
 
@@ -36,11 +37,11 @@ public class CartModel {
         this.img = img;
     }
 
-    public String getTxtSoLuong() {
+    public int getTxtSoLuong() {
         return txtSoLuong;
     }
 
-    public void setTxtSoLuong(String txtSoLuong) {
+    public void setTxtSoLuong(int txtSoLuong) {
         this.txtSoLuong = txtSoLuong;
     }
 }
