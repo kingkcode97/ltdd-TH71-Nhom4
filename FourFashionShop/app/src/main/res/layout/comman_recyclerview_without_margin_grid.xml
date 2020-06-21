@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cooltechworks.views.shimmer.ShimmerRecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recyclerView"
+    android:tag="layout/comman_recyclerview_without_margin_grid_0"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:overScrollMode="never"
+    app:shimmer_demo_angle="30"
+    app:shimmer_demo_duration="@android:integer/status_bar_notification_info_maxnum"
+    app:shimmer_demo_grid_child_count="10"
+    app:shimmer_demo_layout_manager_type="grid" />

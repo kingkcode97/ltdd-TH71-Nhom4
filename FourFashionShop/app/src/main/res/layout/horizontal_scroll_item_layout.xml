@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_btn"
+    android:layout_margin="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/h_s_product_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dress1" />
+
+    <TextView
+        android:id="@+id/h_s_product_description"
+        android:layout_width="84dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="10dp"
+        android:text="Váy đẹp quá"
+        android:textAlignment="center"
+        android:textColor="@color/green_900"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/h_s_product_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/h_s_product_image"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/h_s_product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="Váy dài"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/h_s_product_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/h_s_product_image"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="27dp"
+        android:layout_height="14dp"
+        android:layout_marginBottom="8dp"
+        android:text="VND"
+        android:textColor="@color/black"
+        android:background="@drawable/background_btn"
+        android:textAlignment="center"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/h_s_product_price"
+        app:layout_constraintTop_toTopOf="@+id/h_s_product_price" />
+
+    <TextView
+        android:id="@+id/h_s_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="100000"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
