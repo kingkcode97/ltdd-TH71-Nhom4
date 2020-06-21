@@ -11,20 +11,18 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.FourFashionShop.Models.CartItemModel;
 import com.FourFashionShop.R;
-import com.FourFashionShop.Models.CartModel;
 
 import java.util.List;
 
 public class BeforeOrderAdapter extends RecyclerView.Adapter<BeforeOrderAdapter.MyViewHolder> {
 
-    List<CartModel> cartModelList;
+    List<CartItemModel> cartModelList;
     Context context;
     public int num;
 
-
-
-    public BeforeOrderAdapter(List<CartModel> cartModelList, Context context) {
+    public BeforeOrderAdapter(List<CartItemModel> cartModelList, Context context) {
         this.cartModelList = cartModelList;
         this.context = context;
     }
@@ -45,15 +43,10 @@ public class BeforeOrderAdapter extends RecyclerView.Adapter<BeforeOrderAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull final BeforeOrderAdapter.MyViewHolder holder, int position) {
-        holder.txtNameProductOrder.setText(cartModelList.get(position).getName());
-        holder.txtPricaOrder.setText(String.valueOf(cartModelList.get(position).getTotalPrice()));
-        holder.imageProOrder.setImageResource(cartModelList.get(position).getImg());
-        holder.txtNumPro.setText(String.valueOf(cartModelList.get(position).getTxtSoLuong()));
-
-
-
-
-
+        holder.txtNameProductOrder.setText(cartModelList.get(position).getProductTitle());
+        holder.txtPricaOrder.setText(String.valueOf(cartModelList.get(position).getProductPrice()));
+        holder.imageProOrder.setImageResource(cartModelList.get(position).getProductImage());
+        holder.txtNumPro.setText(String.valueOf(cartModelList.get(position).getProductQuantity()));
     }
 
 

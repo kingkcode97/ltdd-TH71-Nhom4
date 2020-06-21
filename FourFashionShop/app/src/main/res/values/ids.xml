@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="loginBtn" type="id" />
-
     <item name="product_id_textview" type="id" />
     <item name="price_offer" type="id" />
     <item name="price_mrp" type="id" />
@@ -31,4 +30,22 @@
     <item name="deleteQueryNo" type="id" />
     <item name="ruler_checkout" type="id" />
     <item name="checkout_screen_toolbar" type="id" />
+    <item name="first" type="id" />
+    <item name="imgEdit" type="id" />
+    <item name="cardProfile" type="id" />
+    <item name="imgProfile" type="id" />
+    <item name="txtUserName" type="id" />
+    <item name="txtEmail" type="id" />
+    <item name="txtOffer" type="id" />
+    <item name="txtNotification" type="id" />
+    <item name="txtOrder" type="id" />
+    <item name="txtAddress" type="id" />
+    <item name="txtWishlist" type="id" />
+    <item name="txtWallet" type="id" />
+    <item name="txtSettings" type="id" />
+    <item name="txtFeedback" type="id" />
+    <item name="txtRate" type="id" />
+    <item name="txtHelp" type="id" />
+    <item name="txtPolicy" type="id" />
+    <item name="txtLogout" type="id" />
 </resources>

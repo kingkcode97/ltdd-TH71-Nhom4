@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui;
+package com.FourFashionShop.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;

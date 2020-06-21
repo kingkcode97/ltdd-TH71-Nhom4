@@ -5,7 +5,7 @@
     android:background="@color/grey_50"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.OrdersManagementActivity">
+    tools:context=".Activities.OrdersManagementActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewOrdersManagement"

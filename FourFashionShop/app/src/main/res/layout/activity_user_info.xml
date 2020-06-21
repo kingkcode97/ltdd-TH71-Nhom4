@@ -6,48 +6,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:theme="@style/Theme.MaterialComponents.DayNight"
     android:orientation="vertical"
-    android:layout_marginLeft="24dp"
-    android:layout_marginRight="24dp"
+    android:layout_marginLeft="@dimen/_12sdp"
+    android:layout_marginRight="@dimen/_12sdp"
     android:gravity="center"
-    tools:context=".ui.UserInfoActivity">
+    tools:context=".Activities.UserInfoActivity"
+    android:background="@color/pink_50">
 
-    <!--    <com.google.android.material.textfield.TextInputLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        app:boxBackgroundMode="outline"-->
-    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-    <!--        app:boxCornerRadiusBottomStart="16dp"-->
-    <!--        app:boxCornerRadiusBottomEnd="16dp"-->
-    <!--        app:boxCornerRadiusTopEnd="16dp"-->
-    <!--        app:boxCornerRadiusTopStart="16dp"-->
-    <!--        android:hint="@string/username"-->
-    <!--        app:endIconMode="clear_text"-->
-    <!--        app:startIconDrawable="@drawable/ic_person_black_24dp" >-->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginBottom="@dimen/_12sdp"/>
 
-    <!--        <com.google.android.material.textfield.TextInputEditText-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent"/>-->
-    <!--    </com.google.android.material.textfield.TextInputLayout>-->
-
-    <!--    <com.google.android.material.textfield.TextInputLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        app:boxBackgroundMode="outline"-->
-    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-    <!--        app:boxCornerRadiusBottomStart="16dp"-->
-    <!--        app:boxCornerRadiusBottomEnd="16dp"-->
-    <!--        app:boxCornerRadiusTopEnd="16dp"-->
-    <!--        app:boxCornerRadiusTopStart="16dp"-->
-    <!--        app:endIconMode="password_toggle"-->
-    <!--        android:hint="@string/password"-->
-    <!--        android:layout_marginTop="10dp"-->
-    <!--        app:startIconDrawable="@drawable/ic_vpn_key_black_24dp" >-->
-
-    <!--        <com.google.android.material.textfield.TextInputEditText-->
-    <!--            android:inputType="textPassword"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent"/>-->
-    <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -206,12 +177,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/female" />
+
         </RadioGroup>
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnUpdate"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="@string/Update" />
+        android:text="@string/Update"
+        android:background="@drawable/button"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textColor="@color/black"/>
+
 </LinearLayout>

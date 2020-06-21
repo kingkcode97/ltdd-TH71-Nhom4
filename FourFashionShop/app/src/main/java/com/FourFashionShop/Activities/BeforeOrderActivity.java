@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui;
+package com.FourFashionShop.Activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,7 +50,7 @@ public class BeforeOrderActivity extends AppCompatActivity {
         txtContent = (TextView) findViewById(R.id.txtContent);
         txtContent.setText("Địa chỉ nhận hàng\nChọn địa chỉ");
 
-        beforeOrderAdapter = new BeforeOrderAdapter(CartFragment.cartModels, this);
+        beforeOrderAdapter = new BeforeOrderAdapter(CartFragment.cartItemModelList, this);
 
         recycler_product_order = findViewById(R.id.recycler_product_order);
         btnBeforeOrder = findViewById(R.id.btnBeforeOrder);

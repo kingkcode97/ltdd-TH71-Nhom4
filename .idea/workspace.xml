@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4bcbbe50-4dc4-4ccc-b7e1-d9f8a37965ce" name="Default Changelist" comment="" />
+    <list default="true" id="4bcbbe50-4dc4-4ccc-b7e1-d9f8a37965ce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/ltdd-TH71-Nhom4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ltdd-TH71-Nhom4.iml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +15,7 @@
   </component>
   <component name="ProjectId" id="1cqCVmcO2r7WeGGPWH6W3ysPS6z" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/FourFashionShop" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -45,7 +47,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

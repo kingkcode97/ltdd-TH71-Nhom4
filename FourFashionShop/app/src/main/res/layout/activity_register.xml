@@ -9,34 +9,25 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/background"/>
-
-    <ScrollView
-        android:id="@+id/sv"
-        android:scrollbars="none"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/_22sdp"
-        android:padding="@dimen/_4sdp"
-        android:background="@drawable/button"
-        android:fillViewport="true"
-        android:overScrollMode="never">
+        android:scaleType="centerCrop" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical"
+            android:paddingVertical="@dimen/_32sdp"
+            android:paddingHorizontal="@dimen/_24sdp"
+            android:background="@drawable/bg_ui"
             android:paddingLeft="@dimen/_24sdp"
             android:paddingTop="@dimen/_24sdp"
             android:paddingRight="@dimen/_24sdp"
-            android:paddingBottom="@dimen/_12sdp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:paddingBottom="@dimen/_12sdp">
 
             <ImageView
-                android:layout_gravity="center_horizontal"
                 android:layout_width="@dimen/_60sdp"
                 android:layout_height="@dimen/_60sdp"
-                android:src="@mipmap/ic_launcher_foreground"/>
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_launcher_foreground" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -46,35 +37,36 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_22sdp"
                     android:layout_height="@dimen/_22sdp"
-                    android:layout_marginTop="@dimen/_2sdp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/user_outline_purple_900"/>
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:srcCompat="@drawable/user_outline_purple_900" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="@color/purple_900"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:textSize="@dimen/_12sdp"
-                        android:textColor="@color/purple_900"
-                        android:textColorHint="@color/purple_900"
-                        android:layout_gravity="center_horizontal"
                         android:id="@+id/edtName"
-                        android:paddingLeft="@dimen/_32sdp"
-                        android:paddingBottom="@dimen/_12sdp"
-                        android:longClickable="false"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@color/black"
                         android:hint="@string/Fullname"
-                        android:singleLine="true"
+                        android:imeOptions="actionNext"
                         android:inputType="text"
-                        android:imeOptions="actionNext"
-                        android:backgroundTint="@color/purple_900"/>
+                        android:longClickable="false"
+                        android:paddingLeft="@dimen/_32sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/_14sdp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,31 +75,31 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_22sdp"
                     android:layout_height="@dimen/_22sdp"
-                    android:layout_marginTop="@dimen/_2sdp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/user_mail_outline_purple_900"/>
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:srcCompat="@drawable/user_mail_outline_purple_900" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="@color/purple_900"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:textSize="@dimen/_12sdp"
-                        android:textColor="@color/purple_900"
-                        android:textColorHint="@color/purple_900"
-                        android:layout_gravity="center_horizontal"
                         android:id="@+id/edtEmail"
-                        android:paddingLeft="@dimen/_32sdp"
-                        android:paddingBottom="@dimen/_12sdp"
-                        android:longClickable="false"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@color/black"
                         android:hint="@string/Email"
-                        android:singleLine="true"
+                        android:imeOptions="actionNext"
                         android:inputType="textEmailAddress"
-                        android:imeOptions="actionNext"
-                        android:backgroundTint="@color/purple_900"/>
+                        android:longClickable="false"
+                        android:paddingLeft="@dimen/_32sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/_14sdp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -121,31 +113,31 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_22sdp"
                     android:layout_height="@dimen/_22sdp"
-                    android:layout_marginTop="@dimen/_2sdp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/user_mobile_purple_900"/>
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:srcCompat="@drawable/user_mobile_purple_900" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="@color/purple_900"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:textSize="@dimen/_12sdp"
-                        android:textColor="@color/purple_900"
-                        android:textColorHint="@color/purple_900"
-                        android:layout_gravity="center_horizontal"
                         android:id="@+id/edtMobile"
-                        android:paddingLeft="@dimen/_32sdp"
-                        android:paddingBottom="@dimen/_12sdp"
-                        android:longClickable="false"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@color/black"
                         android:hint="@string/MobileNumber"
-                        android:singleLine="true"
+                        android:imeOptions="actionNext"
                         android:inputType="number"
-                        android:imeOptions="actionNext"
-                        android:backgroundTint="@color/purple_900"/>
+                        android:longClickable="false"
+                        android:paddingLeft="@dimen/_32sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/_14sdp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -157,37 +149,37 @@
                 android:layout_marginTop="@dimen/_8sdp">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="@color/purple_900"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
                     app:passwordToggleEnabled="true"
-                    app:passwordToggleTint="@color/purple_900">
+                    app:passwordToggleTint="@color/black">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:textSize="@dimen/_12sdp"
-                        android:textColor="@color/purple_900"
-                        android:textColorHint="@color/purple_900"
-                        android:layout_gravity="center_horizontal"
                         android:id="@+id/edtPassword"
-                        android:paddingLeft="@dimen/_32sdp"
-                        android:paddingBottom="@dimen/_12sdp"
-                        android:longClickable="false"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@color/black"
                         android:hint="@string/Password"
-                        android:singleLine="true"
-                        android:inputType="textPassword"
                         android:imeOptions="actionNext"
-                        android:backgroundTint="@color/purple_900"/>
+                        android:inputType="textPassword"
+                        android:longClickable="false"
+                        android:paddingLeft="@dimen/_32sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/_14sdp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_22sdp"
                     android:layout_height="@dimen/_22sdp"
-                    android:layout_marginTop="@dimen/_2sdp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/user_password_outline_purple_900"/>
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:srcCompat="@drawable/user_password_outline_purple_900" />
 
             </RelativeLayout>
 
@@ -197,37 +189,37 @@
                 android:layout_marginTop="@dimen/_8sdp">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="@color/purple_900"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
                     app:passwordToggleEnabled="true"
-                    app:passwordToggleTint="@color/purple_900">
+                    app:passwordToggleTint="@color/black">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:textSize="@dimen/_12sdp"
-                        android:textColor="@color/purple_900"
-                        android:textColorHint="@color/purple_900"
-                        android:layout_gravity="center_horizontal"
                         android:id="@+id/edtCPassword"
-                        android:paddingLeft="@dimen/_32sdp"
-                        android:paddingBottom="@dimen/_12sdp"
-                        android:longClickable="false"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@color/black"
                         android:hint="@string/ConfirmPassword"
-                        android:singleLine="true"
-                        android:inputType="textPassword"
                         android:imeOptions="actionDone"
-                        android:backgroundTint="@color/purple_900"/>
+                        android:inputType="textPassword"
+                        android:longClickable="false"
+                        android:paddingLeft="@dimen/_32sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/_14sdp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_22sdp"
                     android:layout_height="@dimen/_22sdp"
-                    android:layout_marginTop="@dimen/_2sdp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/user_password_outline_purple_900"/>
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:srcCompat="@drawable/user_password_outline_purple_900" />
 
             </RelativeLayout>
 
@@ -236,51 +228,57 @@
                 android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.AppCompatCheckBox
-                    android:layout_gravity="center_vertical"
                     android:id="@+id/chTerms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/purple_900"/>
+                    android:layout_gravity="center_vertical"
+                    android:buttonTint="@color/black" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:textSize="@dimen/_10sdp"
-                    android:textColor="@color/purple_900"
-                    android:layout_gravity="right"
                     android:id="@+id/txtTermsConditions"
-                    android:paddingTop="@dimen/_12sdp"
-                    android:paddingBottom="@dimen/_12sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Read_Terms"/>
+                    android:layout_gravity="right"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:text="@string/Read_Terms"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textSize="@dimen/_16sdp"
-                android:textColor="@color/colorPrimary"
                 android:id="@+id/btnRegister"
-                android:background="@drawable/button"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_36sdp"
-                android:layout_marginTop="@dimen/_4sdp"
-                android:text="@string/Register"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:background="@drawable/button"
+                android:layerType="software"
                 android:shadowColor="@color/colorPrimary"
                 android:shadowRadius="@android:integer/config_shortAnimTime"
-                android:layerType="software"/>
+                android:text="@string/Register"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:textSize="@dimen/_12sdp"
-                android:textColor="@color/purple_900"
-                android:layout_gravity="center_horizontal"
                 android:id="@+id/txtLogin"
-                android:padding="@dimen/_12sdp"
-                android:visibility="visible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/alreadyHaveAccount"/>
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/_22sdp"
+                android:text="@string/alreadyHaveAccount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="visible" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </ScrollView>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone" />
 
 </RelativeLayout>

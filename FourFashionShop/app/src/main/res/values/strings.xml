@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">FashionShop</string>
+    <string name="app_name">Four Fashion Shop</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -46,15 +46,71 @@
     <string name="Register">Đăng kí</string>
     <string name="alreadyHaveAccount">Đã có tài khoản? Đăng nhập ngay!</string>
 
-    <string name="credits">Credits</string>
-    <string name="you_are_running_nout_of_wallet_money">You are Running \nOut of Wallet Money !!!</string>
-    <string name="add_wallet_money">Add Wallet Money</string>
-    <string name="you_cart_is_empty" tools:ignore="DuplicateDefinition">You Cart is Empty !!</string>
-
     <string name="Button_ComeHome">Tiếp Tục Mua Hàng</string>
     <string name="txtTieuDeOrder">Đơn Hàng Của Bạn Đã Hoàn Thành</string>
     <string name="txtGaoHang">Chọn hình thức giao hàng</string>
     <string name="HoTen">Họ Và Tên</string>
     <string name="Button_MuaHang">Mua Hàng</string>
+    <string name="dummy_user2">Wang Stephen K</string>
+    <string name="dummy_email">kingkcode@gmail.com</string>
+    <string name="account_Offers">Phiếu quà tặng</string>
+    <string name="account_Notification">Thông báo</string>
+    <string name="account_Order">Đơn hàng của bạn</string>
+    <string name="account_Address">Sổ địa chỉ của bạn</string>
+    <string name="account_Wishlist">Danh sách đơn hàng yêu thích</string>
+    <string name="account_Wallet">Ví tiền</string>
+    <string name="account_Settings">Cài đặt</string>
+    <string name="account_Feedback">Phản hồi</string>
+    <string name="account_Rate">Đánh giá</string>
+    <string name="account_HelpCenter">Trung tâm hỗ trợ</string>
+    <string name="account_Policies">Chính sách và quy định</string>
+    <string name="account_Terms">Quy định</string>
+    <string name="account_Logout">Đăng xuất</string>
+    <string name="SearchHint">Tìm kiếm</string>
+    <string name="ShopByCategory">Danh mục</string>
+    <string name="NewArrival">Hàng mới</string>
+    <string name="ViewAll">Xem tất cả</string>
+    <string name="BestSelling">Bán chạy</string>
+    <string name="SaleEnd">Sale kết thúc vào :\1001/07/2020</string>
+    <string name="Sale">Sale</string>
+    <string name="Flash">Flash</string>
+
+    <string name="dummy_category1">Mobiles</string>
+    <string name="dummy_category2">Men\'s Fashion</string>
+    <string name="dummy_category3">Women\'s Fashion</string>
+    <string name="dummy_category4">TVs, ACs &amp; Appliances</string>
+    <string name="dummy_category5">Laptops &amp; PCs</string>
+    <string name="dummy_category6">Home &amp; Kitchen</string>
+    <string name="dummy_category7">Kids &amp; Toys Store</string>
+    <string name="dummy_category8">Beauty &amp; Grooming</string>
+    <string name="dummy_category9">Cars &amp; Bikes</string>
+
+    <string name="dummy_item1">Mentli Solid Black Slim Fit</string>
+    <string name="dummy_item2">Mentli Solid Light Blue Slim Fit</string>
+    <string name="dummy_item3">Mentli Solid Yellow Slim Fit</string>
+    <string name="dummy_item4">Mentli Solid Navy Dark Blue Slim Fit</string>
+    <string name="dummy_item5">Mentli Solid Blue Slim Fit</string>
+    <string name="dummy_item6">Mentli Solid Till Slim Fit</string>
+
+    <string name="dummy_price">100000</string>
+    <string name="dummy_price_discount">110000</string>
+    <string name="dummy_price_ship">+10000</string>
+    <string name="Available" />
+    <string name="minimum_password">Mật khẩu không được ít hơn 6 kí tự</string>
+    <string name="auth_failed">Đăng nhập thất bại</string>
+    <string name="resetpassword">Reset Password</string>
+
+    <string name="facebook_app_id">260487345200577</string>
+    <string name="fb_login_protocol_scheme">fb260487345200577</string>
+
+    <string name="web_client_id">xxxxxxxx..place your web client id here</string>
+    <string name="sign_out">Đăng xuất</string>
+    <string name="google_title_text">Google Sign In</string>
+    <string name="disconnect">Ngắt kết nối</string>
+    <string name="desc_google_icon">Google Logo</string>
+    <string name="title_text">Google Sign-In</string>
+    <string name="signed_in_fmt">Signed in as: %s</string>
+    <string name="DealofDay">Khuyến mãi trong ngày</string>
+
 </resources>
 

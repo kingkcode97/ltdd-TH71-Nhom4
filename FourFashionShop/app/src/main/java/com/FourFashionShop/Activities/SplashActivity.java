@@ -1,4 +1,4 @@
-package com.FourFashionShop.ui;
+package com.FourFashionShop.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +14,7 @@ import com.FourFashionShop.R;
 
 public class SplashActivity extends AppCompatActivity{
 
-    private final int SPLASH_DELAY = 5000;
+    private final int SPLASH_DELAY = 1000;
 
     ImageView logoImage;
     Animation anim_alpha;
