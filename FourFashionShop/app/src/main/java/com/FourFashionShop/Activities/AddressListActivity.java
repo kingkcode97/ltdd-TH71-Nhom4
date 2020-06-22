@@ -44,18 +44,18 @@ public class AddressListActivity extends AppCompatActivity {
 
     private void initItem() {
         addressListModalList = new ArrayList<>();
-        addressListModalList.add(new AddressListModal("Nguyen Duy Nam",
-                "kingcode@gmail.com", "371 nguyen kiem",R.drawable.user));
-        addressListModalList.add(new AddressListModal("Nguyen Duy Nam",
-                "kingcode@gmail.com", "371 nguyen kiem, P4, Quận Gò Vấp, Tp.Hcm",R.drawable.man1));
-        addressListModalList.add(new AddressListModal("Nguyen Duy Nam",
+        addressListModalList.add(new AddressListModal("Nguyễn Duy Nam",
+                "kingcode@gmail.com", "371 nguyen kiem, P4, Quận Gò Vấp, Tp.Hcm",R.drawable.user));
+        addressListModalList.add(new AddressListModal("Đỗ Thiên Phước",
+                "kingcode@gmail.com", "371 nguyen kiem, P4, Quận Gò Vấp, Tp.Hcm",R.drawable.avatar4));
+        addressListModalList.add(new AddressListModal("Võ Thị Thanh Kiều",
                 "kingcode@gmail.com", "371 nguyen kiem",R.drawable.avatar1));
+        addressListModalList.add(new AddressListModal("Võ Phạm Huyền Khanh",
+                "kingcode@gmail.com", "371 nguyen kiem, P4, Quận Gò Vấp, Tp.Hcm",R.drawable.avatar2));
+        addressListModalList.add(new AddressListModal("Đỗ Phùng Ngọc Hân",
+                "kingcode@gmail.com", "371 nguyen kiem, P4, Quận Gò Vấp, Tp.Hcm",R.drawable.avatar3));
         addressListModalList.add(new AddressListModal("Nguyen Duy Nam",
-                "kingcode@gmail.com", "371 nguyen kiem",R.drawable.avatar2));
-        addressListModalList.add(new AddressListModal("Nguyen Duy Nam",
-                "kingcode@gmail.com", "371 nguyen kiem",R.drawable.avatar3));
-        addressListModalList.add(new AddressListModal("Nguyen Duy Nam",
-                "kingcode@gmail.com", "371 nguyen kiem",R.drawable.avatar4));
+                "kingcode@gmail.com", "371 nguyen kiem, P4, Quận Gò Vấp, Tp.Hcm",R.drawable.avatar4));
 
     }
 

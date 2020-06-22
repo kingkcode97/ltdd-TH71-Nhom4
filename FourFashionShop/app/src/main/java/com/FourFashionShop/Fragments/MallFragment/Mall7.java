@@ -33,6 +33,7 @@ public class Mall7 extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_mall1, container, false);
 
+
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_item1);
 
         horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.bs1, "Đồ đẹp", "Đồ quá đẹp", "290990"));

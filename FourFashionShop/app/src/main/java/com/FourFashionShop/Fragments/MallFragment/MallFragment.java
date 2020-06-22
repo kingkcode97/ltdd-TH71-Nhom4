@@ -71,7 +71,6 @@ public class MallFragment extends Fragment{
 
     private void setUpViewPager(ViewPager viewPager) {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getChildFragmentManager(), 0);
-
         viewPagerAdapter.addFragment(new Mall1(), "Denim");
         viewPagerAdapter.addFragment(new Mall2(), "Skirt");
         viewPagerAdapter.addFragment(new Mall3(), "Jacket");

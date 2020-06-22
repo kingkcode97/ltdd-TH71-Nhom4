@@ -44,14 +44,14 @@ public class FavoriteProductActivity extends AppCompatActivity {
 
     void initItem(){
         productModelList = new ArrayList<>();
-        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
+        productModelList.add(new ProductModel(R.drawable.man1, "Áo sơ mi nam cá tính", "200000"));
+        productModelList.add(new ProductModel(R.drawable.man2, "Áo thun nam đen", "300000"));
+        productModelList.add(new ProductModel(R.drawable.man, "Áo thun nữ", "900000"));
+        productModelList.add(new ProductModel(R.drawable.man4, "Áo sơ mi nữ", "700000"));
+        productModelList.add(new ProductModel(R.drawable.man5, "Quần jeans", "230000"));
+        productModelList.add(new ProductModel(R.drawable.man6, "Quần short", "150000"));
+        productModelList.add(new ProductModel(R.drawable.man, "Váy dài", "3500000"));
+        productModelList.add(new ProductModel(R.drawable.man1, "Váy ngắn", "2500000"));
     }
 
     public void removeItem(int position) {
