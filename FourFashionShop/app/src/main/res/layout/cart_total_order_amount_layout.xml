@@ -63,12 +63,12 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
-            android:id="@+id/totalItems"
+            android:id="@+id/txtmeo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="Giá (2 sản phẩm):"
+            android:text="Tạm tính: "
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider" />
@@ -82,7 +82,7 @@
             android:text="Vận chuyển:"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/totalItems" />
+            app:layout_constraintTop_toBottomOf="@+id/txtmeo" />
 
         <TextView
             android:id="@+id/txtPriceTamTinh"
@@ -114,8 +114,7 @@
             android:layout_height="2dp"
             android:layout_marginTop="16dp"
             android:background="?android:attr/listDivider"
-            app:layout_constraintEnd_toEndOf="@+id/textView10"
-            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <TextView
@@ -173,5 +172,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtPriceTamTinh"
             app:layout_constraintTop_toTopOf="@+id/txtPriceTamTinh" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

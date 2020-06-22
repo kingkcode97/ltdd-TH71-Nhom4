@@ -35,6 +35,7 @@ public class CartFragment extends Fragment {
     Button btnOrder;
     TextView txtTongTien;
     ActionBar actionBar;
+    TextView totalItems, totalItemPrice, totalAmount;
     public static int tongTien = 0;
     public static List<CartItemModel> cartItemModelList;
     public static CartAdapter cartAdapter;
@@ -57,11 +58,15 @@ public class CartFragment extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         cartItemsRecycleView.setLayoutManager(layoutManager);
+//
+//        totalItemPrice = view.findViewById(R.id.totalItemPrice);
+//        totalAmount = view.findViewById(R.id.totalAmount);
 
         cartItemModelList = new ArrayList<>();
         cartItemModelList.add(new CartItemModel(0, R.drawable.man1, "Man 1", 100000, "299999", 2));
         cartItemModelList.add(new CartItemModel(0, R.drawable.man2, "Man 2", 200000, "399999", 4));
         cartItemModelList.add(new CartItemModel(0, R.drawable.man3, "Man 3", 300000, "599999", 5));
+
 
         cartAdapter = new CartAdapter(cartItemModelList);
         cartItemsRecycleView.setAdapter(cartAdapter);
@@ -70,8 +75,14 @@ public class CartFragment extends Fragment {
         btnOrder = view.findViewById(R.id.btnOrder);
         txtTongTien = view.findViewById(R.id.txtTongTien);
         add_quantity = view.findViewById(R.id.add_quantity);
-        sub_quantity = view.findViewById(R.id.sub_quantity);
+        totalAmount = view.findViewById(R.id.sub_quantity);
+        TongTien();
 
+        totalItemPrice = view.findViewById(R.id.txtPriceTamTinh);
+
+        txtTongTien.setText(String.valueOf(tongTien));
+//        totalItems.setText(String.valueOf(tongTien));
+//        totalItemPrice.setText(String.valueOf(tongTien));
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +97,7 @@ public class CartFragment extends Fragment {
     }
 
     public void TongTien() {
+        tongTien = 0;
         for (int k = 0; k < cartItemModelList.size(); k++) {
             tongTien += cartItemModelList.get(k).getProductPrice() * cartItemModelList.get(k).getProductQuantity();
         }
@@ -141,6 +153,7 @@ public class CartFragment extends Fragment {
                 addNumber(position);
             }
 
+            //nut tru
             @Override
             public void onRemoveNumberClick(int position) {
                 removeNumber(position);

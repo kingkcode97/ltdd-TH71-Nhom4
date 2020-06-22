@@ -63,7 +63,7 @@ public class CartAdapter extends RecyclerView.Adapter {
                 View CartItemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_item_layout, parent, false);
                 return new CartItemViewHolder(CartItemView, mListener);
             case CartItemModel.TOTAL_AMOUNT:
-                View CartTotalView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_total_amount_layout, parent, false);
+                View CartTotalView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_total_order_amount_layout, parent, false);
                 return new CartItemViewHolder(CartTotalView, mListener);
 
             default:
@@ -193,8 +193,7 @@ public class CartAdapter extends RecyclerView.Adapter {
         public CartTotalAmountViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            totalItems = itemView.findViewById(R.id.totalItems);
-            totalItemPrice = itemView.findViewById(R.id.totalItemPrice);
+            totalItemPrice = itemView.findViewById(R.id.txtPriceTamTinh);
             totalAmount = itemView.findViewById(R.id.totalAmount);
             savedAmount = itemView.findViewById(R.id.savedAmount);
         }

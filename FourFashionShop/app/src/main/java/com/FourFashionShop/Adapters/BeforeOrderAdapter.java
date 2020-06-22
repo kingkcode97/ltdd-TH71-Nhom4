@@ -39,6 +39,7 @@ public class BeforeOrderAdapter extends RecyclerView.Adapter<BeforeOrderAdapter.
         View view = inflater.inflate(R.layout.item_product_order, parent, false);
 
         return new MyViewHolder(view);
+
     }
 
     @Override

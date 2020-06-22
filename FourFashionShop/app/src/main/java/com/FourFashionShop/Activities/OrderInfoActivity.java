@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.FourFashionShop.Fragments.CartFragment;
 import com.FourFashionShop.R;
 
 public class OrderInfoActivity extends AppCompatActivity {
@@ -31,7 +32,8 @@ public class OrderInfoActivity extends AppCompatActivity {
 
         txtInfoAccount = (TextView) findViewById(R.id.txtInfoAccount);
         btnComeHome = (Button) findViewById(R.id.btnComeHome);
-        txtInfoAccount.setText("Khách hàng: \n\n Email: \n\n Địa chỉ: \n\nThành tiền: ");
+        txtInfoAccount.setText("Khách hàng: " + LocationUserActivity.name+  "\n\nEmail: " + "admin@gmail.com" + " \n\nĐịa chỉ: " + LocationUserActivity.location +
+                "\n\nSố điện thoại: " + LocationUserActivity.phone+ "\n\nThành tiền: " + BeforeOrderActivity.tien + "VNĐ");
 
         btnComeHome.setOnClickListener(new View.OnClickListener() {
             @Override
