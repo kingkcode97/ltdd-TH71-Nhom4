@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,8 +26,6 @@ import com.FourFashionShop.Activities.BeforeOrderActivity;
 import com.FourFashionShop.Models.CartModel;
 import com.FourFashionShop.Adapters.CartAdapter;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,9 +34,11 @@ public class CartFragment extends Fragment {
 
     Button btnOrder;
     TextView txtTongTien;
+    ActionBar actionBar;
     public static int tongTien = 0;
     public static List<CartItemModel> cartItemModelList;
     public static CartAdapter cartAdapter;
+    private ImageView add_quantity, sub_quantity;
 
     public CartFragment() {
     }
@@ -48,6 +49,9 @@ public class CartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
+
+//        actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+//        actionBar.setDisplayShowHomeEnabled(true);
 
         cartItemsRecycleView = view.findViewById(R.id.cart_items_recyclerview);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
@@ -65,14 +69,19 @@ public class CartFragment extends Fragment {
 
         btnOrder = view.findViewById(R.id.btnOrder);
         txtTongTien = view.findViewById(R.id.txtTongTien);
+        add_quantity = view.findViewById(R.id.add_quantity);
+        sub_quantity = view.findViewById(R.id.sub_quantity);
 
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ordered = new Intent(getActivity(), BeforeOrderActivity.class);
+                Intent ordered = new Intent(getContext(), BeforeOrderActivity.class);
                 startActivity(ordered);
             }
         });
+
+        buildRecyclerView();
+
         return view;
     }
 
@@ -106,37 +115,39 @@ public class CartFragment extends Fragment {
     }
 
     private void removeItem(int position) {
-
+        cartItemModelList.remove(position);
+        cartAdapter.notifyDataSetChanged();
+        Toast toast = Toast.makeText(getContext(), "Bạn vừa xóa 1 sản phẩm", Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+        TongTien();
     }
 
-//    public void buildRecyclerView() {
-//        cartAdapter.setOnItemClickListener(new CartAdapter.OnItemCartClickListener() {
-//            @Override
-//            public void onItemClick(int position) {
-//
-//            }
-//
-//            @Override
-//            public void onDeleteClick(int position) {
-//                removeItem(position);
-//                NoficationCart();
-//            }
-//
-//            @Override
-//            public void onAddNumberClick(int position) {
-//                addNumber(position);
-//            }
-//
-//            @Override
-//            public void onRemoveNumberClick(int position) {
-//                removeNumber(position);
-//                NoficationCart();
-//            }
-//
-//
-//        });
-//
-//    }
+    public void buildRecyclerView() {
+        cartAdapter.setmListener(new CartAdapter.OnItemCartClickListener() {
+            @Override
+            public void onItemClick(int position) {
+
+            }
+
+            @Override
+            public void onDeleteClick(int position) {
+                removeItem(position);
+                NoficationCart();
+            }
+
+            @Override
+            public void onAddNumberClick(int position) {
+                addNumber(position);
+            }
+
+            @Override
+            public void onRemoveNumberClick(int position) {
+                removeNumber(position);
+                NoficationCart();
+            }
+        });
+    }
 
     public void NoficationCart() {
         ActionBar actionBar = null;
@@ -146,7 +157,8 @@ public class CartFragment extends Fragment {
             toast.show();
         }
         else {
-            actionBar.setTitle("Giỏ hàng(" + cartItemModelList.size() + ")");
+            Toast toast = Toast.makeText(getContext(), "Giỏ hàng(" + cartItemModelList.size() + ")", Toast.LENGTH_LONG);
+//            actionBar.setTitle("Giỏ hàng(" + cartItemModelList.size() + ")");
         }
     }
 }

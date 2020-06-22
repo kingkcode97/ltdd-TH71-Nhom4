@@ -38,8 +38,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         int icon = categoryModelList.get(position).getCategoryIconLink();
         String name = categoryModelList.get(position).getCategoryName();
+        holder.setCategoryIcon(icon);
         holder.setCategory(name);
-
     }
 
     @Override
@@ -57,8 +57,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             categoryName = itemView.findViewById(R.id.category_name);
         }
 
-        private void setCategoryIcon(){
-            //
+        private void setCategoryIcon(final int icon){
+            categoryIcon.setImageResource(icon);
         }
 
         private void setCategory(final String name){

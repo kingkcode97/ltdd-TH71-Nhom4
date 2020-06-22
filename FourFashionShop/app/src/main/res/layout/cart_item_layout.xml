@@ -5,6 +5,7 @@
     android:elevation="3dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="@dimen/_8sdp"
     android:background="@drawable/background_btn"
     android:layout_margin="@dimen/_2sdp">
 
@@ -121,32 +122,6 @@
         app:layout_constraintVertical_bias="0.833"
         app:srcCompat="@drawable/drop_down" />
 
-    <LinearLayout
-        android:id="@+id/remove_item_btn"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="5dp"
-        android:background="@color/pink_50"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/product_quantity"
-        app:layout_constraintVertical_bias="0.0">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textColor="@color/colorPurple"
-            android:textStyle="bold"
-            android:drawablePadding="4dp"
-            android:gravity="center"
-            android:drawableStart="@drawable/ic_close_black_cart"
-            android:text="Bỏ sản phẩm"/>
-    </LinearLayout>
-
     <TextView
         android:id="@+id/textView11"
         android:layout_width="99dp"
@@ -173,5 +148,15 @@
         app:layout_constraintTop_toTopOf="@+id/product_quantity"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/drop_up" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/remove_item_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_black_cart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
