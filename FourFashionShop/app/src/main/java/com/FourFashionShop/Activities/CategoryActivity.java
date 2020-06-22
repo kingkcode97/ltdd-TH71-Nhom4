@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.FourFashionShop.Adapters.CategoryAdapter;
-import com.FourFashionShop.Adapters.GridProductLayoutAdapter;
+//import com.FourFashionShop.Adapters.GridProductLayoutAdapter;
 import com.FourFashionShop.Adapters.HorizontalProductScrollAdapter;
 import com.FourFashionShop.Adapters.SliderAdapter;
 import com.FourFashionShop.Models.CategoryModel;
