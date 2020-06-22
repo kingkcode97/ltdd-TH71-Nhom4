@@ -35,12 +35,13 @@ public class CouponAdapter extends RecyclerView.Adapter<CouponAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        couponModelList.get(position).getImage();
-        couponModelList.get(position).getCouponTitle();
-        couponModelList.get(position).getCouponDescription();
-        couponModelList.get(position).getCouponRule();
-        couponModelList.get(position).getDateFrom();
-        couponModelList.get(position).getDateTo();
+
+        holder.imageView.setImageResource(couponModelList.get(position).getImage());
+        holder.txtCouponTitle.setText(couponModelList.get(position).getCouponTitle());
+        holder.txtCouponDescription.setText(couponModelList.get(position).getCouponDescription());
+        holder.txtCouponRule.setText(couponModelList.get(position).getCouponRule());
+        holder.txtDateFrom.setText(couponModelList.get(position).getDateFrom());
+        holder.txtDateTo.setText(couponModelList.get(position).getDateTo());
     }
 
     @Override

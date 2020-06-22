@@ -37,10 +37,11 @@ public class AddressListAdapter extends RecyclerView.Adapter<AddressListAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        AddressModelList.get(position).getImage();
-        AddressModelList.get(position).getCustomerName();
-        AddressModelList.get(position).getCustomerEmail();
-        AddressModelList.get(position).getCustomerAddress();
+
+        holder.imageView.setImageResource(AddressModelList.get(position).getImage());
+        holder.txtCustomerName.setText(AddressModelList.get(position).getCustomerName());
+        holder.txtCustomerEmail.setText(AddressModelList.get(position).getCustomerEmail());
+        holder.txtCustomerAddress.setText(AddressModelList.get(position).getCustomerAddress());
     }
 
     @Override

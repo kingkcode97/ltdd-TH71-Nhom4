@@ -43,20 +43,16 @@ public class NotificationActivity extends AppCompatActivity {
 
     private void initItem() {
         notificationModelList = new ArrayList<>();
-        notificationModelList.add(new NotificationModel("Người dùng mới",
-                "khuyến mãi dành cho người dùng mới",R.drawable.man1));
-        notificationModelList.add(new NotificationModel("Người dùng mới",
-                "khuyến mãi dành cho người dùng mới",R.drawable.man2));
-        notificationModelList.add(new NotificationModel("Người dùng mới",
-                "khuyến mãi dành cho người dùng mới",R.drawable.man3));
-        notificationModelList.add(new NotificationModel("Người dùng mới",
-                "khuyến mãi dành cho người dùng mới",R.drawable.man4));
-        notificationModelList.add(new NotificationModel("Người dùng mới",
-                "khuyến mãi dành cho người dùng mới",R.drawable.man6));
-        notificationModelList.add(new NotificationModel("Người dùng mới",
-                "khuyến mãi dành cho người dùng mới",R.drawable.man1));
-        notificationModelList.add(new NotificationModel("Người dùng mới",
-                "khuyến mãi dành cho người dùng mới",R.drawable.man));
+        notificationModelList.add(new NotificationModel("Sale hè",
+                "khuyến mãi",R.drawable.man2));
+        notificationModelList.add(new NotificationModel("Sale tết",
+                "khuyến mãi",R.drawable.man3));
+        notificationModelList.add(new NotificationModel("Sale thu đông",
+                "khuyến mãi",R.drawable.dress1));
+        notificationModelList.add(new NotificationModel("Quốc tế Phụ nữ 8/3",
+                "khuyến mãi",R.drawable.fashion1));
+        notificationModelList.add(new NotificationModel("Sale giáng sinh",
+                "khuyến mãi",R.drawable.man1));
 
     }
 

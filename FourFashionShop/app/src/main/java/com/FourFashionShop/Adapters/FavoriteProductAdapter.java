@@ -47,12 +47,11 @@ public class FavoriteProductAdapter extends RecyclerView.Adapter<FavoriteProduct
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        productModelList.get(position).getImage();
-        productModelList.get(position).getName();
-        productModelList.get(position).getPrice();
 
-//        holder.txtName.setText(productModelList.get(position).getName());
-//        holder.txtPrice.setText(productModelList.get(position).getPrice());
+        holder.imgProduct.setImageResource(productModelList.get(position).getImage());
+        holder.txtName.setText(productModelList.get(position).getName());
+        holder.txtPrice.setText(productModelList.get(position).getPrice());
+
     }
 
     @Override

@@ -42,11 +42,11 @@ public class OrdersManagementActivity extends AppCompatActivity {
 
     void initItem(){
         orderModelList = new ArrayList<>();
-            orderModelList.add(new OrderModel("Ao cute","123456", "123842",R.drawable.man1));
-            orderModelList.add(new OrderModel("Ao cute","123456", "123842",R.drawable.man1));
-            orderModelList.add(new OrderModel("Ao cute","123456", "123842",R.drawable.man1));
-            orderModelList.add(new OrderModel("Ao cute","123456", "123842",R.drawable.man1));
-            orderModelList.add(new OrderModel("Ao cute","123456", "123842",R.drawable.man1));
+            orderModelList.add(new OrderModel("Áo sơ mi nam","123456", "12/4/2020",R.drawable.man1));
+            orderModelList.add(new OrderModel("Đầm nữ","23874", "24/5/2020",R.drawable.fashion1));
+            orderModelList.add(new OrderModel("Váy nữ","21841", "12/6/2020",R.drawable.dress1));
+            orderModelList.add(new OrderModel("Áo thun nam","12491", "12/5/2020",R.drawable.man2));
+            orderModelList.add(new OrderModel("Áo sơ mi xanh","2341", "11/6/2020",R.drawable.man4));
 
     }
 

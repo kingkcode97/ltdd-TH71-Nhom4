@@ -35,10 +35,11 @@ public class OrdersManagementAdapter extends RecyclerView.Adapter<OrdersManageme
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        orderModelList.get(position).getImage();
-        orderModelList.get(position).getProductName();
-        orderModelList.get(position).getOrderId();
-        orderModelList.get(position).getOrderDate();
+
+        holder.imageView.setImageResource(orderModelList.get(position).getImage());
+        holder.txtProductName.setText(orderModelList.get(position).getProductName());
+        holder.txtOrderId.setText(orderModelList.get(position).getOrderId());
+        holder.txtOrderDate.setText(orderModelList.get(position).getOrderDate());
 
     }
 
@@ -49,14 +50,14 @@ public class OrdersManagementAdapter extends RecyclerView.Adapter<OrdersManageme
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView txtProductName, txtProductId, txtOrderDate;
+        TextView txtProductName, txtOrderId, txtOrderDate;
         ImageView imageView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             txtProductName=itemView.findViewById(R.id.card_item_name);
-            txtProductId=itemView.findViewById(R.id.card_item_order_id);
+            txtOrderId=itemView.findViewById(R.id.card_item_order_id);
             txtOrderDate=itemView.findViewById(R.id.card_item_order_date);
             imageView=itemView.findViewById(R.id.card_item_img);
         }
