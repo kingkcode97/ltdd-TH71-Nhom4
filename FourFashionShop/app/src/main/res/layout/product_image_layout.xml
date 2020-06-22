@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:elevation="3dp"
-    android:background="@drawable/bg_ui">
+    android:elevation="3dp">
 
     <TextView
         android:id="@+id/textView20"
@@ -89,8 +88,8 @@
             android:id="@+id/tv_product_rating_miniview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4.5"
             android:padding="@dimen/_2sdp"
+            android:text="4.5"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
@@ -170,20 +169,19 @@
         android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginTop="8dp"
         android:background="#FF3030"
         android:orientation="horizontal"
         android:padding="@dimen/_4sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20">
+        app:layout_constraintTop_toBottomOf="@+id/add_item_to_cart_btn"
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
-            android:layout_width="296dp"
+            android:layout_width="311dp"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Kiểm tra giá khi áp dụng Coupon"
@@ -193,9 +191,25 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_gravity="right"
             android:background="@drawable/border_background"
             android:text="Đổi mã"
             android:textColor="@color/white" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/add_item_to_cart_btn"
+        android:layout_width="165dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/background_btn"
+        android:text="Thêm vào giỏ"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

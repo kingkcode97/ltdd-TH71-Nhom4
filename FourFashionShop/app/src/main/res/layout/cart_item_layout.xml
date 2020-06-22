@@ -99,8 +99,8 @@
 
     <TextView
         android:id="@+id/product_quantity"
-        android:layout_width="64dp"
-        android:layout_height="33dp"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/background_btn"
@@ -113,8 +113,8 @@
 
     <ImageView
         android:id="@+id/sub_quantity"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
         android:layout_marginEnd="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/product_quantity"
         app:layout_constraintEnd_toEndOf="@+id/product_quantity"
@@ -140,8 +140,8 @@
 
     <ImageView
         android:id="@+id/add_quantity"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
         android:layout_marginEnd="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/product_quantity"
         app:layout_constraintEnd_toEndOf="@+id/product_quantity"

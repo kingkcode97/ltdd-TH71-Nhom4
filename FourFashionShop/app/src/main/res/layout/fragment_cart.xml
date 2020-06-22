@@ -15,14 +15,11 @@
         android:id="@+id/cart_items_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="396dp"
-        android:layout_margin="@dimen/_2sdp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout3"
+        app:layout_constraintBottom_toTopOf="@+id/include"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.015" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
