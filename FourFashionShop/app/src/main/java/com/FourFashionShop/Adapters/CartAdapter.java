@@ -5,8 +5,10 @@ import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,6 +29,20 @@ public class CartAdapter extends RecyclerView.Adapter {
         this.cartItemModelList = cartItemModelList;
     }
 
+    private OnItemCartClickListener mListener;
+    //interface
+    public interface OnItemCartClickListener {
+        void onItemClick(int position);
+        void onDeleteClick(int position);
+        void onAddNumberClick(int position);
+        void onRemoveNumberClick(int position);
+    }
+
+    public void setmListener(OnItemCartClickListener mListener) {
+        this.mListener = mListener;
+    }
+
+
     @Override
     public int getItemViewType(int position) {
         switch (cartItemModelList.get(position).getType()){
@@ -45,10 +61,10 @@ public class CartAdapter extends RecyclerView.Adapter {
         switch (viewType){
             case CartItemModel.CART_ITEM:
                 View CartItemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_item_layout, parent, false);
-                return new CartItemViewHolder(CartItemView);
+                return new CartItemViewHolder(CartItemView, mListener);
             case CartItemModel.TOTAL_AMOUNT:
                 View CartTotalView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_total_amount_layout, parent, false);
-                return new CartItemViewHolder(CartTotalView);
+                return new CartItemViewHolder(CartTotalView, mListener);
 
             default:
                 return null;
@@ -95,14 +111,67 @@ public class CartAdapter extends RecyclerView.Adapter {
         private TextView productPrice;
         private TextView cuttedPrice;
         private TextView productQuantity;
+        private ImageView sub_quantity, add_quantity;
+        private ImageView remove_item_btn;
 
-        public CartItemViewHolder(@NonNull View itemView) {
+        public CartItemViewHolder(@NonNull View itemView, final OnItemCartClickListener listener) {
             super(itemView);
             productImage = itemView.findViewById(R.id.product_image);
             productTitle = itemView.findViewById(R.id.product_title);
             productPrice = itemView.findViewById(R.id.product_price);
             cuttedPrice = itemView.findViewById(R.id.cutted_price);
             productQuantity = itemView.findViewById(R.id.product_quantity);
+            remove_item_btn = itemView.findViewById(R.id.remove_item_btn);
+            sub_quantity = itemView.findViewById(R.id.sub_quantity);
+            add_quantity = itemView.findViewById(R.id.add_quantity);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null){
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            listener.onItemClick(position);
+                        }
+                    }
+                }
+            });
+
+            remove_item_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null){
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            listener.onDeleteClick(position);
+                        }
+                    }
+                }
+            });
+
+            add_quantity.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null){
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            listener.onAddNumberClick(position);
+                        }
+                    }
+                }
+            });
+
+            sub_quantity.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null){
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            listener.onRemoveNumberClick(position);
+                        }
+                    }
+                }
+            });
 
         }
 

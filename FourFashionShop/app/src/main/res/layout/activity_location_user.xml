@@ -24,6 +24,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
+            android:background="@drawable/bg_ui"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -47,6 +48,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout2"
             android:layout_width="match_parent"
+            android:background="@drawable/bg_ui"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
@@ -72,6 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:background="@drawable/bg_ui"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
@@ -128,6 +131,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_ui"
             android:drawableLeft="@drawable/ic_bag_location"
             android:text=" VĂN PHÒNG"
             android:textSize="12sp"
@@ -144,6 +148,7 @@
             android:layout_marginBottom="10dp"
             android:drawableLeft="@drawable/ic_home_location"
             android:text=" NHÀ RIÊNG"
+            android:background="@drawable/bg_ui"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -229,6 +234,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
+        android:background="@drawable/bg_ui"
         android:drawableStart="@drawable/ic_edit_location_cart"
         android:padding="5dp"
         android:text="Chọn Vị Trí Hiện tại"

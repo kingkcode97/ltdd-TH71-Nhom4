@@ -31,20 +31,20 @@ import java.util.List;
 
 public class CategoryActivity extends AppCompatActivity {
 
-    private RecyclerView categoryRecycleView;
+    private RecyclerView categoryRecycleview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_category);
+//        setSupportActionBar(toolbar);
+//
+//        String title = getIntent().getStringExtra("CategoryName");
+//        getSupportActionBar().setTitle(title);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        String title = getIntent().getStringExtra("CategoryName");
-        getSupportActionBar().setTitle(title);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        categoryRecycleView = findViewById(R.id.category_recyclerview2);
+        categoryRecycleview = findViewById(R.id.category_recyclerview);
 
         /////////////////Banner Slider
         List<SliderModel> sliderModelList = new ArrayList<>();
@@ -70,7 +70,7 @@ public class CategoryActivity extends AppCompatActivity {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        categoryRecycleView.setLayoutManager(linearLayoutManager);
+        categoryRecycleview.setLayoutManager(linearLayoutManager);
         //////////////Horizontal Product Layout
 
         //////////////Grid Product Layout

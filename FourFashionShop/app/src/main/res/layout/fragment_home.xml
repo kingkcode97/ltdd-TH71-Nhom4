@@ -1,69 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
-    android:tag="layout/fragment_home_0"
-    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout7"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:tag="layout/fragment_home_0">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardHeader"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_32sdp"
-        android:layout_margin="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
         app:cardCornerRadius="@dimen/_4sdp"
         app:cardElevation="@dimen/_2sdp"
-        app:cardMaxElevation="@dimen/_2sdp">
+        app:cardMaxElevation="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:textSize="@dimen/_10sdp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
                 android:id="@+id/edtSearch"
-                android:background="@drawable/background_btn"
-                android:paddingLeft="@dimen/_32sdp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/SearchHint"
-                android:singleLine="true"
                 android:layout_toLeftOf="@+id/imgSearchVoice"
+                android:background="@drawable/background_btn"
+                android:hint="@string/SearchHint"
+                android:paddingLeft="@dimen/_32sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 android:textCursorDrawable="@drawable/cursor_primary"
-                />
+                android:textSize="@dimen/_10sdp" />
 
             <androidx.appcompat.widget.AppCompatImageView
 
-                android:padding="@dimen/_8sdp"
                 android:layout_width="@dimen/_32sdp"
                 android:layout_height="@dimen/_32sdp"
                 android:layout_centerVertical="true"
-                app:srcCompat="@drawable/ic_search"/>
+                android:padding="@dimen/_8sdp"
+                app:srcCompat="@drawable/ic_search" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imgSearchVoice"
-                android:padding="@dimen/_8sdp"
                 android:layout_width="@dimen/_32sdp"
                 android:layout_height="@dimen/_32sdp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                app:srcCompat="@drawable/ic_voice"/>
+                android:padding="@dimen/_8sdp"
+                app:srcCompat="@drawable/ic_voice" />
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.core.widget.NestedScrollView
+    <ScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/cardHeader"
-        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
         android:overScrollMode="never"
-        android:scrollbars="none">
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardHeader">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -71,26 +78,26 @@
             android:background="@color/white"
             android:orientation="vertical">
 
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/banner_slider_view_paper"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:background="@drawable/background_btn"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
             <RelativeLayout
                 android:id="@+id/relativeCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="binding_2"
-                android:layout_marginTop="@dimen/_10sdp">
+                android:layout_marginTop="@dimen/_10sdp"
+                android:tag="binding_2">
 
-                <include layout="@layout/category_layout"/>
+                <include layout="@layout/category_layout" />
 
             </RelativeLayout>
-
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/banner_slider_view_paper"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_150sdp"
-                android:layout_marginTop="@dimen/_4sdp"
-                android:layout_marginBottom="@dimen/_4sdp"
-                android:overScrollMode="never"
-                android:scrollbars="none"
-                android:background="@drawable/background_btn"/>
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/linearSale"
@@ -98,8 +105,10 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:orientation="vertical"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:tag="binding_1">
-                <include layout="@layout/horizontal_scroll_layout"/>
+
+                <include layout="@layout/horizontal_scroll_layout" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -115,34 +124,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp">
 
-                    <include layout="@layout/grid_product_layout"/>
+                    <include
+                        layout="@layout/grid_product_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="539dp" />
+
                 </RelativeLayout>
-
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/linearBestSelling"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:tag="binding_4">
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/linearBrands"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="@dimen/_8sdp"
-                android:tag="binding_5">
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </androidx.core.widget.NestedScrollView>
+    </ScrollView>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -22,9 +22,11 @@ import android.widget.TextView;
 import com.FourFashionShop.Activities.CategoryActivity;
 import com.FourFashionShop.Adapters.CategoryAdapter;
 import com.FourFashionShop.Adapters.GridProductLayoutAdapter;
+import com.FourFashionShop.Adapters.HomePageAdapter;
 import com.FourFashionShop.Adapters.HorizontalProductScrollAdapter;
 import com.FourFashionShop.Adapters.SliderAdapter;
 import com.FourFashionShop.Models.CategoryModel;
+import com.FourFashionShop.Models.HomePageModel;
 import com.FourFashionShop.Models.HorizontalProductScrollModel;
 import com.FourFashionShop.Models.SliderModel;
 import com.FourFashionShop.R;
@@ -171,6 +173,22 @@ public class HomeFragment extends Fragment {
 
         gridView.setAdapter(new GridProductLayoutAdapter(horizontalProductScrollModelList));
         //////////////Grid Product Layout
+
+        //////////////
+//        RecyclerView testing = view.findViewById(R.id.testing);
+//        LinearLayoutManager testingLayoutManager = new LinearLayoutManager(getContext());
+//        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+//        testing.setLayoutManager(testingLayoutManager);
+//
+//        List<HomePageModel> homePageModelList = new ArrayList<>();
+//        homePageModelList.add(new HomePageModel(0, sliderModelList));
+//        homePageModelList.add(new HomePageModel(1, "Horizontal", horizontalProductScrollModelList));
+//        homePageModelList.add(new HomePageModel(2, "Grid", horizontalProductScrollModelList));
+//
+//        HomePageAdapter homePageAdapter = new HomePageAdapter(homePageModelList);
+//        testing.setAdapter(homePageAdapter);
+//        homePageAdapter.notifyDataSetChanged();
+        //////////////
 
         return view;
     }

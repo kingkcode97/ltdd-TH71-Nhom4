@@ -5,6 +5,7 @@
     android:elevation="3dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="@dimen/_8sdp"
     android:background="@drawable/background_btn"
     android:layout_margin="@dimen/_2sdp">
 
@@ -98,8 +99,8 @@
 
     <TextView
         android:id="@+id/product_quantity"
-        android:layout_width="64dp"
-        android:layout_height="33dp"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/background_btn"
@@ -112,40 +113,14 @@
 
     <ImageView
         android:id="@+id/sub_quantity"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
         android:layout_marginEnd="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/product_quantity"
         app:layout_constraintEnd_toEndOf="@+id/product_quantity"
         app:layout_constraintTop_toTopOf="@+id/product_quantity"
         app:layout_constraintVertical_bias="0.833"
         app:srcCompat="@drawable/drop_down" />
-
-    <LinearLayout
-        android:id="@+id/remove_item_btn"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="5dp"
-        android:background="@color/pink_50"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/product_quantity"
-        app:layout_constraintVertical_bias="0.0">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textColor="@color/colorPurple"
-            android:textStyle="bold"
-            android:drawablePadding="4dp"
-            android:gravity="center"
-            android:drawableStart="@drawable/ic_close_black_cart"
-            android:text="Bỏ sản phẩm"/>
-    </LinearLayout>
 
     <TextView
         android:id="@+id/textView11"
@@ -165,13 +140,23 @@
 
     <ImageView
         android:id="@+id/add_quantity"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
         android:layout_marginEnd="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/product_quantity"
         app:layout_constraintEnd_toEndOf="@+id/product_quantity"
         app:layout_constraintTop_toTopOf="@+id/product_quantity"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/drop_up" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/remove_item_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_black_cart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

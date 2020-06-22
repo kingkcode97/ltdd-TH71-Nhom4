@@ -17,7 +17,6 @@
             android:orientation="vertical"
             android:paddingVertical="@dimen/_32sdp"
             android:paddingHorizontal="@dimen/_24sdp"
-            android:background="@drawable/bg_ui"
             android:paddingLeft="@dimen/_24sdp"
             android:paddingTop="@dimen/_24sdp"
             android:paddingRight="@dimen/_24sdp"

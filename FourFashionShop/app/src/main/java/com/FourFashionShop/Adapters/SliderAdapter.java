@@ -24,7 +24,7 @@ public class SliderAdapter extends PagerAdapter{
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        View view = LayoutInflater.from(container.getContext()).inflate(R.layout.raw_home_banner, container,false);
+        View view = LayoutInflater.from(container.getContext()).inflate(R.layout.slider_layout, container,false);
         ImageView banner = view.findViewById(R.id.banner_slider);
         banner.setImageResource(sliderModelList.get(position).getBanner());
         container.addView(view, 0);
