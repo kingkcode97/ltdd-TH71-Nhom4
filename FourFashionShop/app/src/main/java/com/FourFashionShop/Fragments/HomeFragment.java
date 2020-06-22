@@ -14,17 +14,21 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.FourFashionShop.Activities.CategoryActivity;
+import com.FourFashionShop.Activities.ProductDetailsActivity;
 import com.FourFashionShop.Adapters.CategoryAdapter;
 import com.FourFashionShop.Adapters.GridProductLayoutAdapter;
 import com.FourFashionShop.Adapters.HomePageAdapter;
 import com.FourFashionShop.Adapters.HorizontalProductScrollAdapter;
 import com.FourFashionShop.Adapters.SliderAdapter;
+import com.FourFashionShop.Fragments.MallFragment.MallFragment;
 import com.FourFashionShop.Models.CategoryModel;
 import com.FourFashionShop.Models.HomePageModel;
 import com.FourFashionShop.Models.HorizontalProductScrollModel;
@@ -156,6 +160,11 @@ public class HomeFragment extends Fragment {
         horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man3, "Man 4", "Man 4 qua dep", "400000"));
         horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man4, "Man 5", "Man 5 qua dep", "500000"));
         horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man5, "Man 6", "Man 6 qua dep", "600000"));
+        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.bodysuit, "Man 6", "Man 6 qua dep", "600000"));
+        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.bw1, "Man 5", "Man 5 qua dep", "500000"));
+        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.bw2, "Man 6", "Man 6 qua dep", "600000"));
+        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.bs6, "Man 6", "Man 6 qua dep", "600000"));
+
 
         HorizontalProductScrollAdapter horizontalProductScrollAdapter = new HorizontalProductScrollAdapter(horizontalProductScrollModelList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -172,6 +181,7 @@ public class HomeFragment extends Fragment {
         GridView gridView = view.findViewById(R.id.grid_product_layout_gridview);
 
         gridView.setAdapter(new GridProductLayoutAdapter(horizontalProductScrollModelList));
+
         //////////////Grid Product Layout
 
         //////////////

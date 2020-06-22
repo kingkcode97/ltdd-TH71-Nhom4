@@ -1,41 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView2"
     android:layout_width="180dp"
     android:layout_height="230dp"
     android:layout_marginRight="5dp"
     cardview:cardCornerRadius="5dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imgItem"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="#2d2d2d"
-            android:scaleType="centerCrop" />
+    <ImageView
+        android:id="@+id/imgItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2d2d2d"
+        android:scaleType="centerCrop"
+        cardview:layout_constraintBottom_toTopOf="@+id/text_Title1"
+        cardview:layout_constraintEnd_toEndOf="parent"
+        cardview:layout_constraintStart_toStartOf="parent"
+        cardview:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/text_Title1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="left"
-            android:text="mlemmmm"
-            android:textColor="#2d2d2d"
-            android:textSize="15dp" />
+    <TextView
+        android:id="@+id/text_Title1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="left"
+        android:text="mlemmmm"
+        android:textColor="#2d2d2d"
+        android:textSize="15dp"
+        cardview:layout_constraintBottom_toTopOf="@+id/text_Title2"
+        cardview:layout_constraintEnd_toEndOf="parent"
+        cardview:layout_constraintStart_toStartOf="parent"
+        cardview:layout_constraintTop_toBottomOf="@+id/imgItem" />
 
-        <TextView
-            android:id="@+id/text_Title2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="left"
-            android:text="abc"
-            android:textColor="@color/Red"
-            android:textSize="13dp" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/text_Title2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="left"
+        android:text="abc"
+        android:textColor="@color/Red"
+        android:textSize="13dp"
+        cardview:layout_constraintBottom_toBottomOf="parent"
+        cardview:layout_constraintEnd_toEndOf="parent"
+        cardview:layout_constraintStart_toStartOf="parent"
+        cardview:layout_constraintTop_toBottomOf="@+id/text_Title1" />
 
 
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
