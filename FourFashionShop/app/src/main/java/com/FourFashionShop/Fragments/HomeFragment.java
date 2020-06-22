@@ -62,6 +62,10 @@ public class HomeFragment extends Fragment {
     private RecyclerView horizontalRecycleView;
     //////////////Horizontal Product Layout
 
+    ///Firebase
+
+    private List<HorizontalProductScrollModel> horizontalProductScrollModelList;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -150,12 +154,12 @@ public class HomeFragment extends Fragment {
         horizontalRecycleView = view.findViewById(R.id.horizontal_scroll_layout_recyclerview);
 
         List<HorizontalProductScrollModel> horizontalProductScrollModelList = new ArrayList<>();
-        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man, "Man 1", "Man 1 qua dep", "100000"));
-        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man1, "Man 2", "Man 2 qua dep", "200000"));
-        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man2, "Man 3", "Man 3 qua dep", "300000"));
-        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man3, "Man 4", "Man 4 qua dep", "400000"));
-        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man4, "Man 5", "Man 5 qua dep", "500000"));
-        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man5, "Man 6", "Man 6 qua dep", "600000"));
+//        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man, "Man 1", "Man 1 qua dep", "100000"));
+//        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man1, "Man 2", "Man 2 qua dep", "200000"));
+//        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man2, "Man 3", "Man 3 qua dep", "300000"));
+//        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man3, "Man 4", "Man 4 qua dep", "400000"));
+//        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man4, "Man 5", "Man 5 qua dep", "500000"));
+//        horizontalProductScrollModelList.add(new HorizontalProductScrollModel(R.drawable.man5, "Man 6", "Man 6 qua dep", "600000"));
 
         HorizontalProductScrollAdapter horizontalProductScrollAdapter = new HorizontalProductScrollAdapter(horizontalProductScrollModelList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
