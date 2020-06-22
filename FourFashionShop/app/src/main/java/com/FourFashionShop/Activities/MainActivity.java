@@ -9,7 +9,7 @@ import com.FourFashionShop.Fragments.CartFragment;
 import com.FourFashionShop.R;
 import com.FourFashionShop.Fragments.AccountFragment;
 import com.FourFashionShop.Fragments.HomeFragment;
-import com.FourFashionShop.Fragments.MallFragment;
+import com.FourFashionShop.Fragments.MallFragment.MallFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
