@@ -33,8 +33,9 @@ public class LocationUserActivity extends AppCompatActivity {
     private Button btSaveLocation, btnLocation;
     private Button btnVanPhong, btnNhaRieng;
     private TextInputEditText txtInputLocation, txtInputName, txtInputNumber;
+    public static int flag = 0;
     private static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
-
+    public static String name, location, phone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +83,8 @@ public class LocationUserActivity extends AppCompatActivity {
                 //code luu location
 
                 //
+
+
                 if (txtInputName.getText().toString().isEmpty())
                     Toast.makeText(getApplicationContext(), "Họ tên không được bỏ trống!", Toast.LENGTH_LONG).show();
                 else if (txtInputLocation.getText().toString().isEmpty())
@@ -92,6 +95,10 @@ public class LocationUserActivity extends AppCompatActivity {
                     Intent comeback = new Intent(getApplication(), BeforeOrderActivity.class);
                     startActivity(comeback);
                 }
+                location = txtInputLocation.getText().toString();
+                phone = txtInputNumber.getText().toString();
+                name = txtInputName.getText().toString();
+                flag = 1;
 
             }
         });

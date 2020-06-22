@@ -1,121 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_200"
-    tools:context=".Fragments.CartFragment">
+    tools:context=".Fragments.CartFragment"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank Fragments layout -->
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cart_items_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="396dp"
+        android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toTopOf="@+id/include"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/include"
-        app:layout_constraintTop_toTopOf="@+id/include">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        >
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_btn"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:gravity="center"
+                android:paddingTop="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/txtThanhTien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/txt_ThanhTien"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:id="@+id/txtTongTien"
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/txtThanhTien"
+                    android:gravity="bottom"
+                    android:text="20000"
+                    android:textColor="#ff4d6a"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:text="VND" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnOrder"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/_8sdp"
+                android:background="@drawable/background_button_card"
+                android:text="@string/Button_MuaHang"
+                android:textAllCaps="false"
+
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/cart_total_amount_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cart_items_recyclerview"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_btn"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:layout_width="240dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:layout_marginEnd="@dimen/_8sdp"
-            android:layout_marginBottom="@dimen/_8sdp"
-            android:gravity="center"
-            android:paddingTop="@dimen/_8sdp">
-
-            <TextView
-                android:id="@+id/txtThanhTien"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
-                android:text="@string/txt_ThanhTien"
-
-                android:textSize="16sp"
-                android:textStyle="bold"
-
-                />
-
-            <TextView
-                android:id="@+id/txtTongTien"
-                android:layout_width="98dp"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/txtThanhTien"
-                android:gravity="bottom"
-                android:text="20000"
-                android:textColor="#ff4d6a"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:paddingLeft="@dimen/_8sdp"
-                android:text="VND" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btnOrder"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_margin="@dimen/_8sdp"
-            android:background="@drawable/background_button_card"
-            android:text="@string/Button_MuaHang"
-            android:textAllCaps="false"
-
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
 
 
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

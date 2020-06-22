@@ -22,7 +22,7 @@ import com.FourFashionShop.R;
 import com.FourFashionShop.Adapters.BeforeOrderAdapter;
 
 public class BeforeOrderActivity extends AppCompatActivity {
-    private TextView txtContent, txtPriceTamTinh, txtTongTien;
+    private TextView txtContent, txtPriceTamTinh, txtTongTien, txtPricaOrder;
     private RecyclerView recycler_product_order;
     private BeforeOrderAdapter beforeOrderAdapter;
     private Button btnBeforeOrder;
@@ -34,7 +34,7 @@ public class BeforeOrderActivity extends AppCompatActivity {
     int shipHomSau = 30000;
     int shipGiaoTC = 20000;
     private int flag = 1;
-    int tien = CartFragment.tongTien;
+    public static int tien = CartFragment.tongTien;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class BeforeOrderActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("Hình Thức Giao Hàng");
 
-
+        txtPricaOrder = findViewById(R.id.txtPricaOrder);
         txtContent = (TextView) findViewById(R.id.txtContent);
         txtContent.setText("Địa chỉ nhận hàng\nChọn địa chỉ");
 
@@ -155,14 +155,19 @@ public class BeforeOrderActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if (rdGiaoHomSau.isChecked() == false && rdGiaoNhanh.isChecked() == false && rdGiaoTC.isChecked() == false)
-                {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Bạn cần chọn hình thức giao hàng!", Toast.LENGTH_LONG);
+                if (LocationUserActivity.flag == 1) {
+                    if (rdGiaoHomSau.isChecked() == false && rdGiaoNhanh.isChecked() == false && rdGiaoTC.isChecked() == false)
+                    {
+                        Toast toast = Toast.makeText(getApplicationContext(), "Bạn cần chọn hình thức giao hàng!", Toast.LENGTH_LONG);
 
-                    toast.show();
-                } else {
-                    Intent ordered = new Intent(getApplication(), OrderInfoActivity.class);
-                    startActivity(ordered);
+                        toast.show();
+                    } else {
+                        Intent ordered = new Intent(getApplication(), OrderInfoActivity.class);
+                        startActivity(ordered);
+                    }
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Bạn cần nhập thông tin địa chỉ!", Toast.LENGTH_LONG).show();
                 }
 
             }
