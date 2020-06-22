@@ -45,7 +45,7 @@
                 android:singleLine="true"
                 />
             <androidx.appcompat.widget.AppCompatTextView
-                android:textSize="@dimen/_10sdp"
+                android:textSize="16dp"
                 android:textColor="@color/white"
                 android:id="@id/txtEmail"
                 android:layout_width="fill_parent"
@@ -128,7 +128,7 @@
                             app:srcCompat="@drawable/account_offer" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtOffer"
@@ -157,7 +157,7 @@
                             app:srcCompat="@drawable/account_notification" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtNotification"
@@ -186,7 +186,7 @@
                             app:srcCompat="@drawable/account_myorder" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtOrder"
@@ -215,7 +215,7 @@
                             app:srcCompat="@drawable/account_myaddress" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtAddress"
@@ -244,7 +244,7 @@
                             app:srcCompat="@drawable/account_wishlist" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtWishlist"
@@ -286,7 +286,7 @@
                             app:srcCompat="@drawable/account_mywallet" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtWallet"
@@ -315,7 +315,7 @@
                             app:srcCompat="@drawable/account_settings" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtSettings"
@@ -343,7 +343,7 @@
                             app:srcCompat="@drawable/account_feedback" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtFeedback"
@@ -372,7 +372,7 @@
                             app:srcCompat="@drawable/account_rate" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtRate"
@@ -401,7 +401,7 @@
                             app:srcCompat="@drawable/account_help" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtHelp"
@@ -432,7 +432,7 @@
                             app:srcCompat="@drawable/account_policy" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtPolicy"
@@ -461,7 +461,7 @@
                             app:srcCompat="@drawable/account_term" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/black"
                             android:gravity="center_vertical"
                             android:id="@id/txtTermsConditions"
@@ -506,7 +506,7 @@
                             app:srcCompat="@drawable/account_logout" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:textSize="@dimen/_10sdp"
+                            android:textSize="16dp"
                             android:textColor="@color/colorPrimary"
                             android:gravity="center_vertical"
                             android:id="@id/txtLogout"

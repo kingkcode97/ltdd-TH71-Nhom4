@@ -46,6 +46,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.UserInfoActivity" />
+        <activity android:name=".Activities.SupportActivity" />
         <activity android:name=".Activities.LocationUserActivity" />
         <activity android:name=".Activities.BeforeOrderActivity" />
         <activity android:name=".Activities.OrderInfoActivity" />

@@ -44,14 +44,14 @@ public class FavoriteProductActivity extends AppCompatActivity {
 
     void initItem(){
         productModelList = new ArrayList<>();
-        productModelList.add(new ProductModel(R.drawable.tra, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.tra, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.tra, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.tra, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.tra, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.tra, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.tra, "Ao cute", "500000"));
-        productModelList.add(new ProductModel(R.drawable.tra, "Ao cute", "500000"));
+        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
+        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
+        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
+        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
+        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
+        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
+        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
+        productModelList.add(new ProductModel(R.drawable.man1, "Ao cute", "500000"));
     }
 
     public void removeItem(int position) {
