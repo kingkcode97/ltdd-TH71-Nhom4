@@ -5,9 +5,8 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_8sdp"
-    android:padding="@dimen/_5sdp"
-    android:background="@drawable/background_btn">
+    android:background="@drawable/background_btn"
+    android:padding="@dimen/_5sdp">
 
 
     <TextView
@@ -15,7 +14,7 @@
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/bg_ui"
         android:paddingTop="@dimen/_10sdp"
         android:text="#Trending"
@@ -23,12 +22,8 @@
         android:textColor="@color/black"
         android:textSize="@dimen/_16sdp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <GridView
         android:id="@+id/grid_product_layout_gridview"
@@ -53,17 +48,16 @@
         android:id="@+id/grid_product_layout_viewAll"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="@dimen/_16sdp"
         android:background="@drawable/bg_ui"
         android:text="@string/ViewAll"
         android:textSize="@dimen/_10sdp"
-        app:layout_constraintBottom_toTopOf="@+id/grid_product_layout_gridview"
+        app:layout_constraintBottom_toBottomOf="@+id/grid_product_layout_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.968"
         app:layout_constraintStart_toEndOf="@+id/grid_product_layout_title"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/grid_product_layout_title"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

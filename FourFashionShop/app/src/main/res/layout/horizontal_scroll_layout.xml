@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="@dimen/_5sdp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/background_btn"
-    android:elevation="3dp">
+    android:elevation="3dp"
+    android:padding="@dimen/_5sdp">
 
     <Button
         android:id="@+id/horizontal_scroll_view_all_btn"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:background="@drawable/bg_ui"
         android:text="@string/ViewAll"
         android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontal_scroll_layout_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.768"
+        app:layout_constraintStart_toEndOf="@+id/horizontal_scroll_layout_title"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_scroll_layout_title" />
 
     <TextView
         android:id="@+id/horizontal_scroll_layout_title"
         android:layout_width="201dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
-        android:paddingTop="@dimen/_10sdp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/bg_ui"
+        android:paddingTop="@dimen/_10sdp"
         android:text="@string/DealofDay"
         android:textAlignment="textStart"
         android:textColor="@color/yellow_A700"
         android:textSize="@dimen/_16sdp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/horizontal_scroll_view_all_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_scroll_view_all_btn"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/horizontal_scroll_layout_recyclerview"

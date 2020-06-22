@@ -42,13 +42,12 @@ public class OrdersManagementActivity extends AppCompatActivity {
 
     void initItem(){
         orderModelList = new ArrayList<>();
-        orderModelList.add(new OrderModel("Ao cute", "123842", "6/2/2020", "Đã mua"));
-        orderModelList.add(new OrderModel("Ao cute", "123842", "6/2/2020", "Đã mua"));
-        orderModelList.add(new OrderModel("Ao cute", "123842", "6/2/2020", "Đã mua"));
-        orderModelList.add(new OrderModel("Ao cute", "123842", "6/2/2020", "Đã mua"));
-        orderModelList.add(new OrderModel("Ao cute", "123842", "6/2/2020", "Đã mua"));
-        orderModelList.add(new OrderModel("Ao cute", "123842", "6/2/2020", "Đã mua"));
-        orderModelList.add(new OrderModel("Ao cute", "123842", "6/2/2020", "Đã mua"));
+            orderModelList.add(new OrderModel("Ao cute","123456", "123842",R.drawable.man1));
+            orderModelList.add(new OrderModel("Ao cute","123456", "123842",R.drawable.man1));
+            orderModelList.add(new OrderModel("Ao cute","123456", "123842",R.drawable.man1));
+            orderModelList.add(new OrderModel("Ao cute","123456", "123842",R.drawable.man1));
+            orderModelList.add(new OrderModel("Ao cute","123456", "123842",R.drawable.man1));
+
     }
 
     @Override

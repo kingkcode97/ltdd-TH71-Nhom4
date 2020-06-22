@@ -12,7 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.FourFashionShop.Activities.AddressListActivity;
+import com.FourFashionShop.Activities.CouponActivity;
 import com.FourFashionShop.Activities.FavoriteProductActivity;
+import com.FourFashionShop.Activities.LoginActivity;
+import com.FourFashionShop.Activities.NotificationActivity;
 import com.FourFashionShop.Activities.OrdersManagementActivity;
 import com.FourFashionShop.Activities.SupportActivity;
 import com.FourFashionShop.Activities.UserInfoActivity;
@@ -22,7 +26,7 @@ import com.FourFashionShop.R;
 public class AccountFragment extends Fragment {
 
     AppCompatImageView imgEdit;
-    AppCompatTextView txtHelp, txtOrder, txtWishlist;
+    AppCompatTextView txtHelp, txtOrder, txtWishlist, txtAddress, txtNotification, txtOffer, txtLogout;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +42,10 @@ public class AccountFragment extends Fragment {
         txtHelp = view.findViewById(R.id.txtHelp);
         txtOrder = view.findViewById(R.id.txtOrder);
         txtWishlist = view.findViewById(R.id.txtWishlist);
+        txtAddress = view.findViewById(R.id.txtAddress);
+        txtNotification = view.findViewById(R.id.txtNotification);
+        txtOffer = view.findViewById(R.id.txtOffer);
+        txtLogout = view.findViewById(R.id.txtLogout);
 
         imgEdit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +75,38 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), FavoriteProductActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txtAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AddressListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txtNotification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), NotificationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txtOffer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CouponActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txtLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
                 startActivity(intent);
             }
         });

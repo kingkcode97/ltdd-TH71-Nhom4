@@ -1,7 +1,8 @@
 package com.FourFashionShop.Models;
 
 public class OrderModel {
-    private String productName, OrderId, OrderDate, Status;
+    private String productName, OrderId, OrderDate;
+    private int image;
 
     public String getProductName() {
         return productName;
@@ -27,18 +28,18 @@ public class OrderModel {
         OrderDate = orderDate;
     }
 
-    public String getStatus() {
-        return Status;
+    public int getImage() {
+        return image;
     }
 
-    public void setStatus(String status) {
-        Status = status;
+    public void setImage(int image) {
+        this.image = image;
     }
 
-    public OrderModel(String productName, String orderId, String orderDate, String status) {
+    public OrderModel(String productName, String orderId, String orderDate, int image) {
         this.productName = productName;
         OrderId = orderId;
         OrderDate = orderDate;
-        Status = status;
+        this.image = image;
     }
 }
