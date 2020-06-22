@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight">
-        <activity android:name=".Activities.ProductDetailsActivity"></activity>
+        <activity android:name=".Activities.CouponActivity"></activity>
+        <activity android:name=".Activities.NotificationActivity" />
+        <activity android:name=".Activities.AddressListActivity" />
+        <activity android:name=".Activities.ProductDetailsActivity" />
         <activity android:name=".Activities.CategoryActivity" />
 
         <meta-data
@@ -52,7 +55,6 @@
         <activity android:name=".Activities.OrderInfoActivity" />
         <activity android:name=".Activities.OrdersManagementActivity" />
         <activity android:name=".Activities.FavoriteProductActivity" />
-        <activity android:name=".Activities.ProductsPurchasedActivity" />
         <activity android:name=".Activities.ResetPasswordActivity" />
         <activity
             android:name=".Activities.MainActivity"

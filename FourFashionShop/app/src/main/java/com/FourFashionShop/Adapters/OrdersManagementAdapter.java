@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,10 +35,11 @@ public class OrdersManagementAdapter extends RecyclerView.Adapter<OrdersManageme
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.txtProductName.setText(orderModelList.get(position).getProductName());
-        holder.txtProductId.setText(orderModelList.get(position).getOrderId());
-        holder.txtOrderDate.setText(orderModelList.get(position).getOrderDate());
-        holder.txtStatus.setText(orderModelList.get(position).getStatus());
+        orderModelList.get(position).getImage();
+        orderModelList.get(position).getProductName();
+        orderModelList.get(position).getOrderId();
+        orderModelList.get(position).getOrderDate();
+
     }
 
     @Override
@@ -47,7 +49,8 @@ public class OrdersManagementAdapter extends RecyclerView.Adapter<OrdersManageme
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView txtProductName, txtProductId, txtOrderDate, txtStatus;
+        TextView txtProductName, txtProductId, txtOrderDate;
+        ImageView imageView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -55,7 +58,7 @@ public class OrdersManagementAdapter extends RecyclerView.Adapter<OrdersManageme
             txtProductName=itemView.findViewById(R.id.card_item_name);
             txtProductId=itemView.findViewById(R.id.card_item_order_id);
             txtOrderDate=itemView.findViewById(R.id.card_item_order_date);
-            txtStatus=itemView.findViewById(R.id.card_item_status);
+            imageView=itemView.findViewById(R.id.card_item_img);
         }
     }
 }

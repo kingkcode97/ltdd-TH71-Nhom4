@@ -69,9 +69,9 @@ public class FavoriteProductAdapter extends RecyclerView.Adapter<FavoriteProduct
         public MyViewHolder(@NonNull View itemView, final FavoriteProductAdapter.OnItemFavoriteProductClickListener listener) {
             super(itemView);
 
-            imgProduct = itemView.findViewById(R.id.card_image);
-            txtName = itemView.findViewById(R.id.card_item_name);
-            txtPrice = itemView.findViewById(R.id.card_item_price);
+            imgProduct = itemView.findViewById(R.id.product_image);
+            txtName = itemView.findViewById(R.id.product_title);
+            txtPrice = itemView.findViewById(R.id.product_price);
             imgBtnRemove = itemView.findViewById(R.id.imgBtnRemoveCart);
 
             itemView.setOnClickListener(new View.OnClickListener() {
